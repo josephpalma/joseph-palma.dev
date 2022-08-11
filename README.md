@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="client/public/jp-logo-black.ico" alt="Logo" width="80" height="80">
   </a>
 
 <h1 align="center">josephpalma.dev - v2</h1>
@@ -13,13 +13,13 @@
       <img src="https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fwww.josephpalma.dev" alt="Website Status" />
     </a>
     <a href="https://www.josephpalma.dev" target="_blank">
-      <img src="https://img.shields.io/badge/heroku-Success-green" alt="Heroku Status" />
+      <img src="https://img.shields.io/badge/heroku-success-green" alt="Heroku Status" />
     </a>
-    <a href="https://github.com/josephpalma/professional-portfolio/LICENSE" target="_blank">
+    <a href="https://github.com/josephpalma/josephpalma.dev/LICENSE" target="_blank">
       <img src="https://img.shields.io/badge/license-MIT-green?color=yellow" alt="License" />
     </a>
-    <a href="https://github.com/josephpalma/professional-portfolio/commits/main" target="_blank">
-      <img src="https://img.shields.io/github/last-commit/josephpalma/professional-portfolio?color=blue" alt="Last commit" />
+    <a href="https://github.com/josephpalma/josephpalma.dev/commits/main" target="_blank">
+      <img src="https://img.shields.io/github/last-commit/josephpalma/josephpalma.dev?color=blue" alt="Last commit" />
     </a>
   </p>
   <p align="center">
@@ -67,12 +67,14 @@
 
 Yes, you may fork this repository. <strong><u>Please give proper credit</u></strong> by linking back to [josephpalma.dev](https://josephpalma.dev). Thank you!
 
+Note that this project was not intented as a starter theme.
 
 ### Built With
 
-* [![React][React.js]][React-url]
-* [![Node][Node.js]][Node-url]
-* [![MaterialUI][MaterialUI]][MaterialUI-url]
+* [![MaterialUI][MaterialUI]][MaterialUI-url] For theming and styles.
+* [![React][React.js]][React-url] For a component based UI.
+* [![Node][Node.js]][Node-url] Enables features like the email service.
+* [![MongoDB][MongoDB]][MongoDB-url] Allows for easy JSON content management.
 
 <br />
 
@@ -198,8 +200,6 @@ Joseph Palma - [Linked In](https://www.linkedin.com/in/joseph-palma-3681b5133/) 
 
 <p align="left">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [React.js]: https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 
@@ -208,3 +208,6 @@ Joseph Palma - [Linked In](https://www.linkedin.com/in/joseph-palma-3681b5133/) 
 
 [MaterialUI]: https://img.shields.io/badge/MUI-007FFF?style=flat&logo=MUI&logoColor=white
 [MaterialUI-url]: https://mui.com/
+
+[MongoDB]: https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=MongoDB&logoColor=white
+[MongoDB-url]: https://www.mongodb.com/ 
