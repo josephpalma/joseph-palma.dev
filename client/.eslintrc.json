@@ -1,0 +1,42 @@
+{   
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "eslint:recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "react/function-component-definition": ["off"],
+        "react/jsx-one-expression-per-line": ["off"],
+        "react/jsx-closing-tag-location": ["off"],
+        "react/jsx-no-useless-fragment": ["off"],
+        "react/jsx-filename-extension": ["off"],
+        "react/jsx-props-no-spreading": ["off"],
+        "react/jsx-wrap-multilines": ["off"],
+        "react/jsx-curly-newline": ["off"],
+        "react/prop-types": ["off"],
+        "linebreak-style": ["off"],
+        "object-curly-newline": ["off"],
+        "operator-linebreak": ["off"],
+        "consistent-return": ["off"],
+        "arrow-body-style": ["off"],
+        "jsx-quotes": ["off"],
+        "no-shadow": ["off"],
+        "prefer-const": ["off"],
+        "max-len": ["off"]
+    }
+}

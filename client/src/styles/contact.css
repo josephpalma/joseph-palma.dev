@@ -1,0 +1,119 @@
+:root {
+  --typed-text-color: rgba(255,255,255, 0.7);
+  --field-border-color: rgba(255,255,255, 0.3);
+  --field-border-hover-color: rgba(255,255,255, 0.7);
+}
+
+.react-form {
+  padding: 20px 0 20px 0;
+  width: fit-content;
+  margin: 0 auto 45px auto;
+}
+
+.alert-container {
+  float: right;
+}
+
+@media (max-width: 600px) { 
+  .alert-container {
+    max-width: 300px;
+  }
+}
+
+.alert {
+  padding: 2px 12px !important;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: -10px !important;
+}
+
+.field-wrapper {
+  padding: 1.1% 0 1.1% 0;
+}
+
+.sent {
+  display: none;
+}
+
+.contact-button {
+  padding: 5px 0;
+  display: inline;
+}
+
+/* Make initial typed text white */
+.field-wrapper > div > div > #initial-text-field { 
+  color: var(--typed-text-color);
+}
+
+/* Make initial typed multiline field text white */
+.field-wrapper > div > div > #initial-multiline-text-field {
+  color: var(--typed-text-color);
+}
+
+/* Make focused typed text white */
+.field-wrapper > div > div > #focused-text-field {
+  color: var(--typed-text-color);
+}
+
+/* Make focused typed multiline field text white */
+.field-wrapper > div > div > #focused-multiline-text-field {
+  color: var(--typed-text-color);
+}
+
+/* Make error typed field text red */
+.field-wrapper > div > div > #error-text-field {
+  color: var(--error-color);
+}
+
+/* Make text field outlines white  */
+.field-wrapper > div > div > fieldset {
+  border-color: var(--field-border-color);
+}
+
+/* Make text field outlines whiter on hover  */
+.field-wrapper > div > .css-nf2t6l-MuiInputBase-root-MuiOutlinedInput-root:hover > fieldset,
+.field-wrapper > div > .css-nf2t6l:hover > fieldset,
+.field-wrapper > div > .css-15ax2y7:hover > fieldset,
+.field-wrapper > div > .css-4rsjo5-MuiInputBase-root-MuiOutlinedInput-root:hover > fieldset,
+.field-wrapper > div > .css-4rsjo5:hover > fieldset,
+.field-wrapper > div > .css-16btly5:hover > fieldset {
+  border-color: var(--field-border-hover-color);
+}
+
+/* Make focused text field outlines blue on hover */
+.field-wrapper > .focused-field > div > fieldset,
+.field-wrapper > div > .Mui-focused:hover > fieldset,
+.field-wrapper > div > .css-4rsjo5:hover > fieldset {
+  border-color: var(--primary-color) !important;
+}
+
+/* Make focused error field outlines red on hover  */
+.field-wrapper > div > .Mui-error:hover > fieldset,
+.field-wrapper > div > .Mui-focused:hover .Mui-error:hover > fieldset  {
+  border-color: var(--error-color) !important;
+} 
+
+/* Make focused label blue */
+.field-wrapper > div > #focused-text-field-label {
+  color: var(--primary-color) !important;
+}
+
+/* Make error label blue */
+.field-wrapper > div > #error-text-field-label {
+  color: var(--error-color) !important;
+}
+
+/* Make text field text white   */
+.field-wrapper > div > label  {
+  color: var(--field-border-color);
+}
+
+/* Make autocomplete the right styles */
+.field-wrapper > div > div > input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(255,255,255, 0.7) !important;
+  -webkit-box-shadow: 0 0 0px 1000px var(--background-gradient) inset !important;
+  box-shadow: 0 0 0px 1000px #12121200 inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+} 

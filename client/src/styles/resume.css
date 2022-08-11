@@ -1,0 +1,77 @@
+:root {
+  --resume-shadow: var(--primary-color_strong);
+}
+
+.resume-wrapper {
+  padding-top: 14px;
+}
+
+.mobile-wrapper {
+  text-align: center;
+  display: block;
+}
+
+.mobile-resume {
+  width: 100% !important;
+}
+
+.resume-grid {
+  display: grid; 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 0fr 4fr; 
+  gap: 0px 0px; 
+  width: fit-content;
+  margin: 0 auto 50px auto;
+}
+
+.top-content_item {
+  display: inline;
+}
+
+.download {
+  float: left;
+  color: var(--primary-color) !important;
+  font-family: var(--mono_font-family) !important;
+  font-size: var(--mono_font-size);
+  letter-spacing: var(--mono_letter-spacing);
+  font-weight: 600;
+}
+
+.download-icon {
+  transform: translate(0px,20%);
+  font-size: small !important;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 77.5%;
+}
+
+.page-pdf {
+  -webkit-box-shadow: 0px 0px 22px 2px var(--resume-shadow) !important;  
+  box-shadow: 0px 0px 22px 2px var(--resume-shadow) !important;
+}
+
+.react-pdf__Page__canvas {
+  border-radius: 7px;
+  background-color: white;
+  height: auto;
+  display: block;
+}
+
+.react-pdf__Page__annotations {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .pagination {
+    width: 75.5%;
+  }
+}
+
+.css-ffdjqo.Mui-selected:hover .css-17n1sgb.Mui-selected:hover {
+  background-color: rgba(255,255,255, 0.3) !important;
+}

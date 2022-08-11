@@ -1,0 +1,192 @@
+:root {
+  --menu-icons-color: #263238;
+  --menu-icons-hover-color: #263238b2;
+}
+
+body {
+  margin: 0;
+  background-color: var(--light-background) !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+p {
+  font-weight: 400 !important;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
+  margin-left: -15px;
+}
+
+* {
+  transition: 0.3s;
+}
+
+.main-card {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important;
+  background-color: var(--background) !important;
+}
+
+#root-component {
+  max-width: 95%;
+  height: 100vh;
+}
+
+.App {
+  max-width: 1450px;
+  margin: 0 auto 0 auto;
+}
+
+.tab-container {
+  max-width: 100% !important;
+}
+
+#card-content {
+  min-height: calc(100vh - 125px);
+}
+
+#footer {
+  height: 60px;
+  max-width: 1450px;
+  margin: 0 auto 0 auto;
+}
+
+.footer-toolbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-text {
+  position: absolute;
+  top: 10px;
+  font-size: 11.5px !important;
+  font-family: 'JetBrains Mono Medium', var(--text_font-family) !important;
+}
+
+.footer-links {
+  position: relative;
+  top: 11px;
+}
+
+.footer-links > a > svg {
+  font-size: 1.169rem !important;
+}
+
+.light-switch {
+  margin-left: -5.5px;
+}
+
+.light-switch-color, .light-switch > span {
+  color: var(--menu-icons-color)  !important;
+}
+
+.tab-content_container {
+  padding: 0 1.5% 0 1.5%;
+}
+
+.menu-links {
+  float: right;
+  display: inline;
+}
+
+.menu-icons {
+  margin: 0 3px 0 3px;
+  font-size: 26px !important;
+  color: var(--menu-icons-color);
+}
+
+.menu-icons:hover {
+  color: var(--menu-icons-hover-color);
+}
+
+.icon-img {
+  width: 26px;
+  height: 105%;
+  padding: 0;
+  margin: 0 0 0 4px;
+}
+
+.icon-img:hover {
+  filter: invert(38%) sepia(0%) hue-rotate(27deg) brightness(65%) contrast(140%);
+}
+
+.linkedin {
+  transform: scale(1.15);
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--primary-color) !important;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.40s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media (max-width: 440px) {
+  .tab-container {
+    margin-left: auto !important;
+  }
+  .skills-page {
+    width: 111% !important;
+    margin-left: -1%;
+  }
+}
+
+@media (max-width: 890px) {
+  .App {
+    max-width: 104%;
+  }
+  .css-1qsxih2 {
+    padding-right: 1px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #root-component {
+    padding-right: 0 !important;
+  }
+}
+
+.menu-icon-box {
+  margin: 7px 4px 0 0;
+}
+
+nav > div > div > div > .Mui-selected {
+  font-family: "San Francisco Bold" !important;
+}
+nav > div > div > div > button {
+  letter-spacing: 0.675px !important;
+}
+
+.css-17goime-MuiCircularProgress-root {
+  -webkit-animation: animation-61bdi0 8.4s cubic-bezier(0.47, 0.12, 0.52, 0.96) infinite !important;
+  animation: animation-61bdi0 8.4s cubic-bezier(0.47, 0.12, 0.52, 0.96) infinite !important;
+}

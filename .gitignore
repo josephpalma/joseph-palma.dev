@@ -1,0 +1,13 @@
+*.iml
+.idea
+.DS_Store
+node_modules/
+config/
+server/jp-portfolio-site
+server/client
+/site
+/test
+/*.env
+.env
+.env.local
+npm-debug.log

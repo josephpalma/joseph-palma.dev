@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap');
+
+@font-face {
+  font-family: 'JetBrains Mono Light';
+  font-weight: 300;
+  src: url('../assets/fonts/JetBrainsMono/JetBrainsMono-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono Medium';
+  font-weight: 400;
+  src: url('../assets/fonts/JetBrainsMono/JetBrainsMono-Medium.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("../assets/fonts/SanFrancisco/sanfranciscodisplay-regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "San Francisco Light";
+  font-weight: 400;
+  src: url("../assets/fonts/SanFrancisco/sanfranciscodisplay-light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "San Francisco Black";
+  font-weight: 600;
+  src: url("../assets/fonts/SanFrancisco/sanfranciscodisplay-black-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "San Francisco Bold";
+  font-weight: 800;
+  src: url("../assets/fonts/SanFrancisco/sanfranciscodisplay-bold-webfont.woff") format("woff");
+}
+
+:root {
+  /* Backgrounds */
+  --background: #121212;
+  --background-gradient: rgba(18,18,18,.94);
+  --light-background: #fff;
+
+  /* Titles */
+  --title-color:  rgba(0,0,0, 0.98);
+  --title_font-family: "San Francisco", "Roboto", "Helvetica", "Arial", sans-serif;
+  --title-secondary_font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  --title_font-size: 1.15rem;
+  --title_line-height: 1.25;
+  --title_letter-spacing: 0.02857em; 
+  --title_font-weight: 500;
+
+  /* Subtitles */
+  --subtitle_line-height: 1.167;
+  --subtitle_letter-spacing: -0.01562em;
+  --subtitle_font-size: 17px;
+  --subtitle_font-weight: 300;
+
+  /* Texts */
+  --text-color: rgba(0,0,0, 0.99);
+  --text_font-family: "San Francisco", "Roboto", "Helvetica", "Arial", sans-serif;
+  --text_font-weight: 400;
+
+  /* Monos */
+  --mono_font-family: "JetBrains Mono", "Roboto Mono", monospace;
+  --mono_font-size: 13px;
+  --mono_letter-spacing: -0.018em;
+
+  /* Colors */
+  --primary-color: rgb(54, 97, 148);
+  --secondary-color: rgba(35, 44, 54, 0.984);
+  --secondary-color_soft: rgb(35, 44, 54, 0.1);
+  --secondary-color_strong: rgb(35, 44, 54, 0.78);
+  --primary-color_soft: rgba(54, 97, 148, .09);
+  --primary-color_strong: rgba(54, 97, 148, .24);
+  --primary-color_stronger: rgba(54, 97, 148, .61);
+  --error-color: #B1161E;
+}

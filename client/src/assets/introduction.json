@@ -1,0 +1,22 @@
+{
+  "title": {
+    "name": "Joseph Palma",
+    "occupation": "Software Developer",
+    "position": "entry-level",
+    "fields": "Front-End Software Developer"
+  },
+  "intro": {
+    "location": "based out of Honolulu, Hawai'i.",
+    "description": "My passion is in delievering scalable, efficient and beautiful products."
+  },
+  "about": {
+    "introduction": "based out of Honolulu, Hawai'i. My passion is in building extraordinary digital expierences, and bridging the gap between engineering and design to deliever scalable, efficient and beautiful products.",
+    "education": "University of Hawai'i at Mānoa",
+    "degree": "Computer Science",
+    "extra": "When I'm not coding, I'm probably making beats, playing the guitar or spending time at the beach.",
+    "internships": {
+      "nsin": "NSIN",
+      "ameresco": "Ameresco"
+    }
+  }
+}

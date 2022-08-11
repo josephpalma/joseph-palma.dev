@@ -1,0 +1,17 @@
+{
+  "skills": {
+    "url": "https://jp-portfolio-site.herokuapp.com/skills"
+  },
+  "jobs": {
+    "url": "https://jp-portfolio-site.herokuapp.com/jobs"
+  },
+  "resume": {
+    "url": "https://storage.googleapis.com/portfoliosite-photos/JosephPalma.pdf"
+  },
+  "experience": {
+    "url": "https://jp-portfolio-site.herokuapp.com/experiences"
+  },
+  "email": {
+    "url": "https://jp-portfolio-site.herokuapp.com/outboundEmailRequests"
+  }
+}
