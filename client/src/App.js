@@ -89,7 +89,7 @@ function App() {
               <Container disableGutters className="tab-container">
                 {tab === 'Skills' ? <Skills mobile={mobile} screenWidth={screenWidth} isDarkTheme={isDarkTheme} /> : <></>}
                 {tab === 'Experience' ? <Jobs mobile={mobile} screenWidth={screenWidth} isDarkTheme={isDarkTheme} /> : <></>}
-                {tab === 'About' ? <About isDarkTheme={isDarkTheme} /> : <></>}
+                {tab === 'About' ? <About isDarkTheme={isDarkTheme} setTab={mobileResumeSelect} /> : <></>}
                 {tab === 'Resume' ? <Resume screenWidth={screenWidth} isDarkTheme={isDarkTheme} setTabAfter={mobileResumeSelect} /> : <></>}
                 {tab === 'Projects' ? <Experience screenWidth={screenWidth} isDarkTheme={isDarkTheme} /> : <></>}
                 {tab === 'Contact' ? <ContactForm screenWidth={screenWidth} isDarkTheme={isDarkTheme} /> : <></>}

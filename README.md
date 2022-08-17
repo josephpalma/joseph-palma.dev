@@ -3,7 +3,7 @@
 <br />
 
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
+  <a href="https://www.josephpalma.dev">
     <img src="client/public/jp-logo-black.ico" alt="Logo" width="80" height="80">
   </a>
 

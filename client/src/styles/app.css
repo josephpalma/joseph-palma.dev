@@ -11,11 +11,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
 p {
-  font-weight: 400 !important;
+  font-weight: 400;
+  font-size: 1.05rem !important;
 }
 
 code {
@@ -52,7 +52,7 @@ html {
 }
 
 #card-content {
-  min-height: calc(100vh - 125px);
+  min-height: calc(100vh - 124px);
 }
 
 #footer {

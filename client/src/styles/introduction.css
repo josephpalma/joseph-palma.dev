@@ -1,5 +1,9 @@
+:root {
+  --text-fam: "San Francisco"
+}
+
 p {
-  font-family:  var(--text_font-family) !important;
+  font-family: var(--text-fam), var(--text_font-family) !important;
   color: var(--text-color);
 }
 

@@ -17,6 +17,11 @@
     "internships": {
       "nsin": "NSIN",
       "ameresco": "Ameresco"
-    }
+    },
+
+    "intro": "I am a design-minded front-end developer focused on building exceptional digital experiences. I am highly adaptable and driven by learning. If there is a problem, I seek ways to fix it. Whether it takes reading a book or picking up a lesson in a new framework, I’ve always been eager to solve the challenges that development can bring.",
+    "experience" : "I’ve worked at awesome places like ;Speridian Technologies;https://www.speridian.com/; and ;Ktuh FM Honolulu;https://ktuh.org/;, and built many cool things along the way. A recent Computer Science graduate from the ;University of Hawaii at Mānoa;https://manoa.hawaii.edu/;, I've had the opportunity to complete a three-month co-op at ;NSIN;https://www.nsin.mil/; and a two year engineering internship at ;Ameresco;https://www.ameresco.com/; – and get involved in the design, planning and execution of the 2022 Hawaiians in Tech Hackathon.",
+    "skills": "My passion is in bridging the gap between engineering, design, and user experience. This shines in my front-end work – whether it’s upbuilding scalable resources, structuring my user-interfacing architecture with accessibility at the forefront, or writing code with future maintainers in mind.",
+    "interests": "All things audio and music production - including sound design, composition, mixing and mastering. When not coding I’m either playing my guitars, sampling vinyl or spending time outside with my dog."
   }
 }
