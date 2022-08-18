@@ -20,7 +20,7 @@ function Footer({ isDarkTheme }) {
       <Container maxWidth="xl">
         <Toolbar disableGutters className="footer-toolbar">
           <Typography color={isDarkTheme ? 'text.dark' : 'text.light'} variant="body1" className="footer-text">
-            &copy;{year} Joseph Palma | All Rights Reserved
+            &copy;{year} Joseph Palma | Thanks for visiting
           </Typography>
           <Box className="footer-links">
             <a

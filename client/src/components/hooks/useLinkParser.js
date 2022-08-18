@@ -31,7 +31,7 @@ const useLinkParser = (text, constraint = 1) => {
           // put linkurl into a variable
           let isLinkURLFound = false;
           while (!isLinkURLFound) {
-            for (k = l + 2; k < text.length; k += 1) {
+            for (k = l + 1; k < text.length; k += 1) {
               if (text[k] !== ';') {
                 linkurl = linkurl.concat(text[k]);
               } else if (text[l] === ';') {

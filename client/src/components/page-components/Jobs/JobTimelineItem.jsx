@@ -11,6 +11,7 @@ import {
 import { Typography } from '@mui/material';
 import '../../../styles/timeline.css';
 import '../../../styles/app.css';
+import useLinkParser from '../../hooks/useLinkParser';
 
 function JobTimelineItem({
   latest,
@@ -24,6 +25,9 @@ function JobTimelineItem({
   descriptionTwo,
   descriptionThree,
 }) {
+  const descriptionOneText = descriptionOne ? useLinkParser(descriptionOne, 5) : '';
+  const descriptionTwoText = descriptionTwo ? useLinkParser(descriptionTwo, 5) : '';
+  const descriptionThreeText = descriptionThree ? useLinkParser(descriptionThree, 5) : '';
   const first = latest <= 1;
   const last = latest >= count;
   let oppositeStyle = '';
@@ -65,7 +69,7 @@ function JobTimelineItem({
               <Typography className="description-point">&gt;</Typography>
               <div className="description-text">
                 {' '}
-                {descriptionOne}
+                {descriptionOneText}
               </div>
             </li>
           ) : <></>}
@@ -74,7 +78,7 @@ function JobTimelineItem({
               <Typography className="description-point">&gt;</Typography>
               <div className="description-text">
                 {' '}
-                {descriptionTwo}
+                {descriptionTwoText}
               </div>
             </li>
           ) : <></>}
@@ -83,7 +87,7 @@ function JobTimelineItem({
               <Typography className="description-point">&gt;</Typography>
               <div className="description-text">
                 {' '}
-                {descriptionThree}
+                {descriptionThreeText}
               </div>
             </li>
           ) : <></>}
