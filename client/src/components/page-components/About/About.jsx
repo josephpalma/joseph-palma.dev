@@ -7,7 +7,7 @@ import AboutContent from './AboutContent';
 
 function About({ isDarkTheme, setTab }) {
   document.body.style.setProperty('--text-fam', isDarkTheme ? 'San Francisco Light' : 'San Francisco');
-  const { status, data, error } = useFetch(api.about.url);
+  const { status, data } = useFetch(api.about.url);
 
   return (
     <section
@@ -20,8 +20,7 @@ function About({ isDarkTheme, setTab }) {
       {status === 'idle' && (<div className="spinner"><CircularProgress color="error" /></div>)}
       {status === 'error' &&
         (<div className='spinner' style={isDarkTheme ? { color: 'rgba(255,255,255,.7)' } : { color: 'rgba(0,0,0.9)' }}>
-          <span>error getting data:&nbsp;</span>
-          {error}
+          <span>error getting data&nbsp;</span>
         </div>)
       }
       {status === 'fetching' && (<div className="spinner"><CircularProgress color="primary" /></div>)}

@@ -3,7 +3,6 @@ const compression = require('compression');
 const cors = require("cors");
 const app = express();
 const helmet = require('helmet');
-const config = require("./config/develop.js");
 const router = require("./router/routes.js");
 const emailRouter = require("./router/emails.js");
 const mongo = require("./db/connections/mongo.js");
@@ -41,7 +40,7 @@ app.use("/experiences", express.static(__dirname + '/client'))
 app.use("/about", express.static(__dirname + '/client')) 
 
 let HOST = "";
-const PORT = process.env.PORT || config.port;
+const PORT = process.env.PORT || 8080;
 let DB = mongo ? "succesfully connected" : "❌ connection failed! ❌";
 const event = new Date(Date.now());
 const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };

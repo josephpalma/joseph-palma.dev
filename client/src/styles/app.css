@@ -1,6 +1,7 @@
 :root {
   --menu-icons-color: #263238;
   --menu-icons-hover-color: #263238b2;
+  --navtabs-color: rgba(0,0,0,0.9);
 }
 
 body {
@@ -16,6 +17,18 @@ body {
 p {
   font-weight: 400;
   font-size: 1.05rem !important;
+}
+
+p::selection, 
+div::selection, 
+h6::selection, 
+h5::selection, 
+h4::selection, 
+h3::selection, 
+h2::selection, 
+h1::selection,
+span::selection {
+  background-color: var(--secondary-color);
 }
 
 code {
@@ -124,6 +137,16 @@ html {
 
 .linkedin {
   transform: scale(1.15);
+}
+
+.navtabs {
+  font-family: 'San Francisco' !important;
+  color: var(--navtabs-color) !important;
+}
+
+.navtabs:focus {
+  color: var(--primary-color) !important; 
+  font-family: 'San Francisco Bold' !important;
 }
 
 .hover-underline-animation {

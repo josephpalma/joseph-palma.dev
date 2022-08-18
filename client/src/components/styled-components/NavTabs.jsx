@@ -6,6 +6,8 @@ import resume from '../page-components/Resume/Joseph Palma Resume.pdf';
 import LinkTab from './LinkTab';
 
 const NavTabs = ({ isDarkTheme, tab, setTab, mobile }) => {
+  document.body.style.setProperty('--navtabs-color', isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)');
+
   const mobileTabs = (
     <Box style={{ maxWidth: '480px' }} as="nav">
       <Tabs
@@ -25,12 +27,12 @@ const NavTabs = ({ isDarkTheme, tab, setTab, mobile }) => {
           },
         }}
       >
-        <Tab value="About" label="About" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Projects" label="Projects" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Experience" label="Experience" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Skills" label="Skills" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <LinkTab value="Resume" label="Resume" disableRipple href={resume} style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Contact" label="Contact Me" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
+        <Tab value="About" label="About" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Projects" label="Projects" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Experience" label="Experience" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Skills" label="Skills" disableRipple tabindex="0" className="navtabs" />
+        <LinkTab value="Resume" label="Resume" disableRipple tabindex="0" href={resume} className="navtabs" />
+        <Tab value="Contact" label="Contact Me" disableRipple tabindex="0" className="navtabs" />
       </Tabs>
     </Box>
   );
@@ -44,12 +46,12 @@ const NavTabs = ({ isDarkTheme, tab, setTab, mobile }) => {
         centered={window.innerWidth <= 1000}
         aria-label="Navigation Tabs"
       >
-        <Tab value="About" label="About" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Projects" label="Projects" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Experience" label="Experience" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Skills" label="Skills" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Resume" label="Resume" disableRipple href={mobile ? resume : null} style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
-        <Tab value="Contact" label="Contact Me" disableRipple style={{ color: isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.84)', fontFamily: 'San Francisco' }} />
+        <Tab value="About" label="About" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Projects" label="Projects" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Experience" label="Experience" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Skills" label="Skills" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="Resume" label="Resume" disableRipple href={mobile ? resume : null} tabindex="0" className="navtabs" />
+        <Tab value="Contact" label="Contact Me" disableRipple tabindex="0" className="navtabs" />
       </Tabs>
     </Box>
   );
