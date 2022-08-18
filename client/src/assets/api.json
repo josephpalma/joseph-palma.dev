@@ -13,5 +13,8 @@
   },
   "email": {
     "url": "https://jp-portfolio-site.herokuapp.com/outboundEmailRequests"
+  },
+  "about": {
+    "url": "https://jp-portfolio-site.herokuapp.com/about"
   }
 }

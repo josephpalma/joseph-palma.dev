@@ -26,6 +26,8 @@ mongo ? app.get("/jobs", router.jobs.getAll) : console.log("Database connection 
 
 mongo ? app.get("/experiences", router.experiences.getAll) : console.log("Database connection failed! ❌");
 
+mongo ? app.get("/about", router.about.getAll) : console.log("Database connection failed! ❌");
+
 mongo ? app.get("/outboundEmailRequests/:id", emailRouter.email.getOne) : console.log("Database connection failed! ❌");
 
 app.post("/outboundEmailRequests", (req, res) => {
@@ -36,6 +38,7 @@ app.post("/outboundEmailRequests", (req, res) => {
 app.use("/skills", express.static(__dirname + '/client')) 
 app.use("/jobs", express.static(__dirname + '/client'))
 app.use("/experiences", express.static(__dirname + '/client')) 
+app.use("/about", express.static(__dirname + '/client')) 
 
 let HOST = "";
 const PORT = process.env.PORT || config.port;

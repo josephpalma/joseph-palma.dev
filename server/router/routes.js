@@ -1,6 +1,7 @@
 const Skills = require("../db/models/skills.js");
 const Jobs = require("../db/models/jobs.js");
 const Experiences = require("../db/models/experiences.js");
+const About = require("../db/models/about.js");
 
 /* Routes */
 
@@ -53,6 +54,22 @@ const router = {
         });
       } catch (err) {
         console.log("experiences.getAll() error: ", err.message, err);
+      }
+    }
+  },
+  /* josephpalma.dev/about routes */
+  about: {
+    //GET
+    getAll: async (req, res) => {
+      try {
+        About.find({}, function (err, found) {
+          if (err) { 
+            console.log("about.find({}) error: ", err);
+           }
+          res.json(found);
+        });
+      } catch (err) {
+        console.log("about.getAll() error: ", err.message, err);
       }
     }
   },
