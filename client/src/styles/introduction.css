@@ -2,17 +2,18 @@
   --text-fam: "San Francisco"
 }
 
-p {
-  font-family: var(--text-fam), var(--text_font-family) !important;
-  color: var(--text-color);
-}
-
 .intro-headers {
   display: inline;
   line-height: var(--title_line-height) !important;
   letter-spacing: var(--title_letter-spacing) !important;
   font-weight: var(--title_font-weight) !important;
   text-shadow: none;
+}
+
+.intro-header_text {
+  display: inline;
+  font-size: 1.065rem !important;
+  color: var(--text-color);
 }
 
 .header {

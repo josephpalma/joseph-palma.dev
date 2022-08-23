@@ -41,8 +41,8 @@ function AboutContent({ content, setTab }) {
                 tabIndex={0}
                 role='link'
               >
-                feel free to reach out. 👉
-              </div>
+                feel free to reach out.
+              </div> 👉
             </Typography>
           </article>
       }

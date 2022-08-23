@@ -3,6 +3,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import { Typography } from '@mui/material';
 import { GitHub, OpenInBrowser } from '@mui/icons-material';
+import ExperienceContent from '../page-components/Experience/ExperienceContent';
 
 const dropdownDividerLeft = {
   float: 'left',
@@ -15,7 +16,20 @@ const dropdownDividerRight = {
   borderTop: '1px solid rgba(255,255,255,0.2)',
 };
 
-function Dropdown({ className, primaryText, secondaryText, screenWidth, gitLink, extLink, myKey }) {
+const readMoreClosedButton = {
+  margin: '3px 0 -15px 0',
+};
+
+function Dropdown({
+  className,
+  primaryText,
+  secondaryText,
+  screenWidth,
+  gitLink,
+  extLink,
+  myKey,
+  addContent = {},
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const splitText = () => {
@@ -50,8 +64,9 @@ function Dropdown({ className, primaryText, secondaryText, screenWidth, gitLink,
 
   const setOpen = async () => setIsOpen(!isOpen);
 
-  document.body.style.setProperty('--dropdown-width', `${screenWidth / 1.75}px`);
+  const dropDownStyles = { ...addContent.styles, ...{ readMoreClosedButton } };
 
+  const adjustableMargin = screenWidth * (screenWidth > 500 ? 0.03 : 0.001);
   return (
     <div className={className}>
       {!isOpen ?
@@ -86,27 +101,35 @@ function Dropdown({ className, primaryText, secondaryText, screenWidth, gitLink,
             </span>
             {primaryText ? <p className='project-info_description-text open-dropdown-item'>{primaryText}</p> : <></>}
             {secondaryText ? <p className='project-info_description-text open-dropdown-item'>{secondaryText}</p> : <></>}
-            <ul className="project-info_list links" aria-label="Links to resources">
-              <li className="project-info_item links">
-                <hr id="dropdown-divider-left" className='dropdown-left' style={dropdownDividerLeft} />
-                <Typography variant="h5">
-                  <div style={{ height: 'fit-content', marginRight: '20px' }}>
-                    {gitLink ? (
-                      <a title="Github" href={gitLink} target="__blank" referrerPolicy="no-referrer" rel="external">
-                        <GitHub color="primary" className="project-links" style={{ marginRight: '1px' }} />
-                      </a>
-                    ) : <></>}
-                    {extLink ? (
-                      <a title="External link" href={extLink} target="__blank" referrerPolicy="no-referrer" rel="external" style={{ display: 'inline-flex' }}>
-                        <OpenInBrowser color="primary" className={`project-links ${gitLink ? 'external-link external-link_dropdown' : 'external-link-nogit'}`} />
-                      </a>
-                    ) : <></>}
-                  </div>
-                </Typography>
-                <hr id="dropdown-divider-right" style={dropdownDividerRight} />
-              </li>
-            </ul>
+
           </p>
+          <ExperienceContent
+            content={addContent.content}
+            readMore={addContent.readMore}
+            handleMore={addContent.handleMore}
+            mobile={addContent.mobile}
+            styles={dropDownStyles}
+          />
+          <ul className="project-info_list links" aria-label="Links to resources">
+            <li className="project-info_item links">
+              <hr id="dropdown-divider-left" className='dropdown-left' style={dropdownDividerLeft} />
+              <Typography variant="h5">
+                <div style={{ height: 'fit-content', marginRight: '20px' }}>
+                  {gitLink ? (
+                    <a title="Github" href={gitLink} target="__blank" referrerPolicy="no-referrer" rel="external">
+                      <GitHub color="primary" className="project-links" style={{ marginRight: `${adjustableMargin}px` }} />
+                    </a>
+                  ) : <></>}
+                  {extLink ? (
+                    <a title="External link" href={extLink} target="__blank" referrerPolicy="no-referrer" rel="external" style={{ display: 'inline-flex' }}>
+                      <OpenInBrowser color="primary" className={`project-links ${gitLink ? 'external-link external-link_dropdown' : 'external-link_dropdown'}`} />
+                    </a>
+                  ) : <></>}
+                </div>
+              </Typography>
+              <hr id="dropdown-divider-right" style={dropdownDividerRight} />
+            </li>
+          </ul>
         </div>
       }
     </div>

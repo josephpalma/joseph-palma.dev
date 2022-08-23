@@ -15,8 +15,7 @@ body {
 }
 
 p {
-  font-weight: 400;
-  font-size: 1.05rem !important;
+  font-family: var(--text-fam), var(--text_font-family) !important;
 }
 
 p::selection, 
@@ -165,7 +164,7 @@ html {
   left: 0;
   background-color: var(--primary-color);
   transform-origin: bottom right;
-  transition: transform 0.40s ease-out;
+  transition: transform 0.50s ease-out;
 }
 
 .hover-underline-animation:hover:after {

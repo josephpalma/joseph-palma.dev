@@ -16,7 +16,7 @@ function Footer({ isDarkTheme }) {
   const year = new Date(Date.now()).getFullYear();
 
   return (
-    <AppBar position="inherit" color="primary" id="footer" component="footer" enableColorOnDark>
+    <AppBar position="relative" color="primary" id="footer" component="footer" enableColorOnDark>
       <Container maxWidth="xl">
         <Toolbar disableGutters className="footer-toolbar">
           <Typography color={isDarkTheme ? 'text.dark' : 'text.light'} variant="body1" className="footer-text">

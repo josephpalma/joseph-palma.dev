@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Typography } from '@mui/material';
 import { GitHub, OpenInBrowser } from '@mui/icons-material';
 import '../../../styles/experience.css';
 import Dropdown from '../../styled-components/Dropdown';
+import ExperienceContent from './ExperienceContent';
 
 let mobileProjectItemStyle = null;
 let mobileProjectPhotoWrapperStyle = null;
@@ -25,6 +26,7 @@ const mobileStyles = {
   },
   projectInfoDescription: {
     width: '100%',
+    marginTop: '-26px',
   },
   projectInfoTechnologies: {
     width: '80%',
@@ -43,19 +45,25 @@ function ExperienceItem({
   techDescription,
   userDescription,
   technologies,
+  moreContent,
 }) {
+  const [readMore, setReadMore] = useState(false);
+
   const setStyles = () => {
     mobileProjectItemStyle = mobileStyles.projectItem;
     mobileProjectPhotoWrapperStyle = mobileStyles.projectPhotoWrapper;
     mobileProjectInfoWrapperStyle = mobileStyles.projectInfoWrapper;
     mobileProjectTechnologiesStyle = mobileStyles.projectInfoTechnologies;
     mobileProjectDescriptionStyle = mobileStyles.projectInfoDescription;
+    return {
+      mobileProjectItemStyle, mobileProjectPhotoWrapperStyle, mobileProjectInfoWrapperStyle, mobileProjectTechnologiesStyle, mobileProjectDescriptionStyle,
+    };
   };
 
   const getExternalLink = () => {
     const link = (
       <a title="External link" href={links[0].External} target="__blank" referrerPolicy="no-referrer" rel="external" className={`links-tag ${links[0].Github ? '' : 'external'}`}>
-        <OpenInBrowser color="primary" className="project-links external-link" />
+        <OpenInBrowser color="primary" className="project-links project-links_desktop external-link" />
       </a>
     );
     const spacer = <></>;
@@ -68,7 +76,7 @@ function ExperienceItem({
   const getGithubLink = () => {
     const link = (
       <a title="Github" href={links[0].Github} target="__blank" referrerPolicy="no-referrer" rel="external" className={`links-tag ${links[0].External ? 'git' : ''}`}>
-        <GitHub color="primary" className="project-links" style={{ marginRight: '1px' }} />
+        <GitHub color="primary" className="project-links project-links_desktop" style={{ marginRight: '1px' }} />
       </a>
     );
     const spacer = <></>;
@@ -78,6 +86,8 @@ function ExperienceItem({
     return spacer;
   };
 
+  const handleMore = () => { setReadMore(!readMore); };
+
   const mobile = screenWidth < 898;
   setStyles();
 
@@ -85,7 +95,10 @@ function ExperienceItem({
     <section aria-label="Project">
       <li className="project-item" style={mobile ? mobileProjectItemStyle : {}}>
         {/* IMAGE */}
-        <div className="project-photo_wrapper" style={mobile ? mobileProjectPhotoWrapperStyle : {}}>
+        <div
+          className={`project-photo_wrapper ${readMore ? 'project-photo_wrapper_read-more' : ''}`}
+          style={mobile ? mobileProjectPhotoWrapperStyle : {}}
+        >
           <a href={links[0].External} rel="external" target="__blank" referrerPolicy="no-referrer">
             <img src={photo} alt="app screenshot" loading="lazy" id="project-photo" />
           </a>
@@ -131,15 +144,23 @@ function ExperienceItem({
               myKey={title}
               gitLink={links[0].Github}
               extLink={links[0].External}
+              addContent={{
+                content: moreContent,
+                handleMore: () => handleMore(),
+                readMore,
+                mobile,
+                styles: setStyles(),
+              }}
             /> :
-            <section
-              className="project-info_description"
-              style={mobile ? mobileProjectDescriptionStyle : {}}
-              aria-label="Project description"
-            >
-              {userDescription ? <p className="project-info_description-text">{userDescription}</p> : <></>}
-              {techDescription ? <p className="project-info_description-text">{techDescription}</p> : <></>}
-            </section>
+            <ExperienceContent
+              styles={setStyles()}
+              mobile={mobile}
+              userDesc={userDescription}
+              techDesc={techDescription}
+              content={moreContent}
+              handleMore={handleMore}
+              readMore={readMore}
+            />
           }
           {/* TECHNOLOGIES */}
           <ul className="project-info_list technologies" style={mobile ? mobileProjectTechnologiesStyle : {}}>

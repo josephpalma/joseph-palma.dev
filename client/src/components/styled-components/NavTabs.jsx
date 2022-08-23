@@ -27,12 +27,12 @@ const NavTabs = ({ isDarkTheme, tab, setTab, mobile }) => {
           },
         }}
       >
-        <Tab value="About" label="About" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Projects" label="Projects" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Experience" label="Experience" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Skills" label="Skills" disableRipple tabindex="0" className="navtabs" />
-        <LinkTab value="Resume" label="Resume" disableRipple tabindex="0" href={resume} className="navtabs" />
-        <Tab value="Contact" label="Contact Me" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="About" label="About" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Projects" label="Projects" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Experience" label="Experience" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Skills" label="Skills" disableRipple tabIndex={0} className="navtabs" />
+        <LinkTab value="Resume" label="Resume" disableRipple tabIndex={0} href={resume} className="navtabs" />
+        <Tab value="Contact" label="Contact Me" disableRipple tabIndex={0} className="navtabs" />
       </Tabs>
     </Box>
   );
@@ -46,12 +46,12 @@ const NavTabs = ({ isDarkTheme, tab, setTab, mobile }) => {
         centered={window.innerWidth <= 1000}
         aria-label="Navigation Tabs"
       >
-        <Tab value="About" label="About" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Projects" label="Projects" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Experience" label="Experience" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Skills" label="Skills" disableRipple tabindex="0" className="navtabs" />
-        <Tab value="Resume" label="Resume" disableRipple href={mobile ? resume : null} tabindex="0" className="navtabs" />
-        <Tab value="Contact" label="Contact Me" disableRipple tabindex="0" className="navtabs" />
+        <Tab value="About" label="About" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Projects" label="Projects" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Experience" label="Experience" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Skills" label="Skills" disableRipple tabIndex={0} className="navtabs" />
+        <Tab value="Resume" label="Resume" disableRipple href={mobile ? resume : null} tabIndex={0} className="navtabs" />
+        <Tab value="Contact" label="Contact Me" disableRipple tabIndex={0} className="navtabs" />
       </Tabs>
     </Box>
   );

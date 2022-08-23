@@ -23,7 +23,6 @@ function ContactField({ label, name, type, error, errorText, multiline, validate
     <TextField
       id='initial-text-field'
       label={label}
-      // color='primary'
       onChange={async (v) => changeField(v)}
       name={name}
       type={type}

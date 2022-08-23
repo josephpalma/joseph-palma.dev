@@ -29,6 +29,7 @@ function Experience({ isDarkTheme, screenWidth }) {
             links={item.Links}
             photo={item.Photo}
             technologies={item.Technologies}
+            moreContent={item.MoreContent}
             screenWidth={screenWidth}
             isDarkTheme={isDarkTheme}
             key={item.Title}

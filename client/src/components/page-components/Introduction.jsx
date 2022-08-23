@@ -29,13 +29,13 @@ function Introduction({ isDarkTheme, tablet }) {
           </div>
         ) : <></>}
         <Spacer axis="vertical" size={12} />
-        <Typography color={isDarkTheme ? 'text.light' : 'text.dark'} variant="body1" style={{ display: 'inline', fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
+        <Typography color={isDarkTheme ? 'text.light' : 'text.dark'} variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
           I am a&nbsp;
         </Typography>
-        <Typography variant="body1" color={theme} style={{ display: 'inline', fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
+        <Typography variant="body1" color={theme} style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
           {introduction.title.occupation}&nbsp;
         </Typography>
-        <Typography color={isDarkTheme ? 'text.light' : 'text.dark'} variant="body1" style={{ display: 'inline', fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
+        <Typography color={isDarkTheme ? 'text.light' : 'text.dark'} variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
           {introduction.intro.location}&nbsp;
         </Typography>
       </div>
