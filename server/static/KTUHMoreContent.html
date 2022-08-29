@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <style>
+    .read-more_grid {
+      display: grid;
+      grid-template-columns: 2fr .5fr;
+      grid-template-rows: auto 1fr;
+      grid-column-gap: 25px;
+      grid-row-gap: 0px; 
+    }
+    .read-more_content-title {
+      font-family: var(--title-secondary_font-family) !important;
+      font-weight: var(--title_font-weight) !important;
+      font-size: 1rem !important;
+      line-height: var(--title_line-height) !important;
+      letter-spacing: var(--title_letter-spacing) !important;
+      color: var(--primary-color);
+      margin-bottom: 0;
+      text-transform: uppercase !important;
+      text-shadow: none;
+    }
+    .read-more_content-p {
+      padding: 0;
+      margin: 5.5px 0 5.5px 0;
+    }
+  </style>
+</head>
+
+<div class="read-more_content">
+  <div class="read-more_grid">
+    <div>
+      <h4 class="read-more_content-title">KTUH In The Community</h4>
+      <p class="read-more_content-p">
+        KTUH FM is a public, college radio station which broadcasts live on the air 24/7 in Hawai’i. On O’ahu, 
+        where the only other public radio station is NPR, KTUH is a staple in the community.
+        With 10% of its 20,000 daily listeners tuning in online - the stream has become a signature of the station, 
+        allowing greater access to broadcasts within the community and around the world.        
+      </p>
+      <h4 class="read-more_content-title">Challenges</h4>
+      <p class="read-more_content-p">
+        We heard stories from DJ’s, listeners, administrators and staff, which helped us gain a better insight into the needs of users. Stories were then broken into three categories:
+      </p>
+      <ul style="list-style: square">
+        <li>
+          <p class="read-more_content-p">
+            Content management - with the constant churn of student employee’s, how do we utilize a content management system to provide as little onboarding overhead as possible?
+          </p>
+        </li>
+        <li>
+          <p class="read-more_content-p">
+            A Non-Dedicated Server - we want to build a back-end system that is maintainable by university IT staff, whose load is tethered to the resources of the university.
+          </p>
+        </li>
+        <li>
+          <p class="read-more_content-p">
+            UX Concerns - an outdated stream player. How can we keep the stream playing while users navigate the site? 
+            How do we modernize the player while keeping a tradional FM radio feel?        
+          </p>
+          <!-- HAVE PICTURE OF PLAYER CSS ONLY -->
+          <!-- HAVE IT SAY KTUH FM HONOLULU AND SONG AND ARTIST NAME  -->
+          <!-- INCLUDE PROJECT ROLE: PM, LEAD DEV IN SIDEBAR -->
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="read-more_content-title">Timeline</h4>
+      <p class="read-more_content-p">July 2019 - Jan 2020</p>
+      <h4 class="read-more_content-title">Teammates</h4>
+      <p class="read-more_content-p">Derek Chan - Back-end Programmer</p>
+      <p class="read-more_content-p">Joseph Paragas - Assistant Programmer</p>
+      <p class="read-more_content-p">Bjarne Bartlett - Station Manager</p>
+      <h4 class="read-more_content-title">Tech Stack</h4>
+      <p class="read-more_content-p">React</p>
+      <p class="read-more_content-p">Wordpress</p>
+      <p class="read-more_content-p">PHP REST API</p>
+      <p class="read-more_content-p">Apache</p>
+      <p class="read-more_content-p">Dedicated Server</p>
+    </div>
+  </div>
+  <div>
+    <h4 class="read-more_content-title" style="margin-top: 12px">Web App Solution</h4>
+    <p class="read-more_content-p">
+      We successfully built a web app that solved the digital issues faced by staff, DJ’s and listeners. 
+      Choosing React as a front-end library allowed us to componentize the existing website's design. 
+      Its stateful Hooks such as useContext, enabled an awesome streaming experience. 
+      Wordpress became the tried and true CMS after we found it was used for previous iterations of the website - 
+      so many DJ’s had experience with it.  
+    </p>
+    <p class="read-more_content-p">
+      Since Wordpress uses PHP as its scripting language, we choose to build a PHP API for all things http: content, streaming, and hosting. 
+      Previously, the site was hosted and maintained by a sole developer, so we worked with the University to run our new app on their industrial scale server system - 
+      complete with an in-house IT staff and backed by the resources of the University.
+    </p>
+    <h4 class="read-more_content-title" style="margin-top: 12px">Bigger Picture</h4>
+    <p class="read-more_content-p">
+      With a task like integrating two domains which have little historical overlap, success was found in the stories of users. 
+      By talking to public radio listeners, we learned more about the intricacies of online listening. 
+      By talking to administrators, we developed a hosting plan that better utilized the resources of the organization.
+    </p>
+  </div>
+</div>
+</html>

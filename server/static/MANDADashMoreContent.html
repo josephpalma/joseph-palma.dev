@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8" />
+  <style>
+    .read-more_grid {
+      display: grid;
+      grid-template-columns: 2fr .5fr;
+      grid-template-rows: auto 1fr;
+      grid-column-gap: 25px;
+      grid-row-gap: 0px; 
+    }
+    .read-more_content-title {
+      font-family: var(--title-secondary_font-family) !important;
+      font-weight: var(--title_font-weight) !important;
+      font-size: 1rem !important;
+      line-height: var(--title_line-height) !important;
+      letter-spacing: var(--title_letter-spacing) !important;
+      color: var(--primary-color);
+      margin-bottom: 0;
+      text-transform: uppercase !important;
+      text-shadow: none;
+    }
+    .read-more_content-p {
+      padding: 0;
+      margin: 5.5px 0 5.5px 0;
+    }
+    .subnav {
+      overflow: hidden;
+      display: inline-flex;
+      cursor: pointer;
+    }
+    .subnav > a {
+      float: left;
+      display: inline-grid;
+      align-content: center;
+      font-family: 'San Francisco' !important;
+      color: var(--navtabs-color) !important;
+      letter-spacing: 0.675px !important;
+      font-weight: 500;
+      font-size: 0.875rem;
+      line-height: 1.25;
+      text-transform: uppercase;
+      max-width: 360px;
+      min-width: 90px;
+      position: relative;
+      min-height: 8px;
+      -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+      flex-shrink: 0;
+      padding: 12px 16px;
+      overflow: hidden;
+      white-space: normal;
+      text-align: center;
+      text-decoration: none;
+    }
+    .subnav > a:active, .subnav > a:hover {
+      background-color: var(--primary-color);
+    }
+    body {
+      background: aliceblue
+    }
+  </style>
+</head>
+
+<body>
+<script>
+  function handleChange(event) {
+    event.preventDefault();
+    let newTab = event.target.id;
+    let visiblePage; 
+    let hiddenPage1; 
+    let hiddenPage2;
+
+    if (newTab.includes('Tech')) {
+      visiblePage = document.getElementById('subpage-1');
+      hiddenPage1 = document.getElementById('subpage-2');
+      hiddenPage2 = document.getElementById('subpage-3');
+    } else if (newTab.includes('Data')) {
+      visiblePage = document.getElementById('subpage-2');
+      hiddenPage1 = document.getElementById('subpage-1');
+      hiddenPage2 = document.getElementById('subpage-3');
+    } else if (newTab.includes('Scrape')) {
+      visiblePage = document.getElementById('subpage-3');
+      hiddenPage1 = document.getElementById('subpage-2');
+      hiddenPage2 = document.getElementById('subpage-1');
+    }
+    visiblePage.style.display = 'inline';
+    hiddenPage1.style.display = 'none';
+    hiddenPage2.style.display = 'none';
+  };
+</script>
+<div class="read-more_content">
+  <div class="read-more_grid">
+    <div>
+      <p class="read-more_content-p">
+        <i>“My logisticians are a humorless lot... they know if my campaign fails, they are the first ones I will slay.” - Alexander the Great</i>     
+      </p>
+      <h4 class="read-more_content-title">Project Challenge</h4>
+      <p class="read-more_content-p">
+        When crisis arises, Marine Corps Commanders must quickly orient, observe and assess the situation. 
+        Commander’s employ logisticians to inform the course of action by providing estimates on air and sea port 
+        attributes and assets. Estimates needed to make a safe determination can take planners days per key terrain 
+        location. Time spent manually aggregating hundreds of data points takes time away from Commanders - 
+        which can result in catastrophic repercussions for our nation, friendly forces, partners and allies.     
+      </p>
+      <h4 class="read-more_content-title">Project Solution</h4>
+      <p class="read-more_content-p">
+        The “Maritime and Aviation Dashboard” or Manda Dashboard allows logisticians to conduct estimates 
+        much faster by providing quick data cards with port, airfield, and throughput capacities on specific 
+        locations. The Dashboard achieved the mission statement by synthesizing hard-to-access information, 
+        accessible in a very short amount of time, in an easy-to-digest fashion, enabling decisions and 
+        improving the agility of the logistical team.
+      </p>
+
+      <nav class="subnav" aria-label="Sub article tabs">
+        <a class="subnav-item" id="Tech Requirements" onClick="return handleChange(event)">Tech Requirements</a>
+        <a class="subnav-item" id="Data Access" onClick="return handleChange(event)">Data Access</a>
+        <a class="subnav-item" id="Scrape & Display" onClick="return handleChange(event)">Scrape & Display</a>
+      </a>
+      <div id="subpage-1">
+        <p>SUBPAGE 1</p>
+      </div>
+      <div id="subpage-2" style="display: none;">
+        <p>SUBPAGE 2</p>
+      </div>
+      <div id="subpage-3" style="display: none;">
+        <p>SUBPAGE 3</p>
+      </div>
+
+    </div>
+
+    <div>
+      <h4 class="read-more_content-title">Timeline</h4>
+      <p class="read-more_content-p">May 2021 - Aug 2021</p>
+    </div>
+  </div>
+  <!-- <div>
+    <h4 class="read-more_content-title" style="margin-top: 12px">Development Challenges</h4>
+    <p class="read-more_content-p">
+      some text goes here....
+    </p>
+  </div> -->
+</div>
+</body>
+</html>

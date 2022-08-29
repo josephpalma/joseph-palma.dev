@@ -30,14 +30,16 @@ mongo ? app.get("/about", router.about.getAll) : console.log("Database connectio
 mongo ? app.get("/outboundEmailRequests/:id", emailRouter.email.getOne) : console.log("Database connection failed! ❌");
 
 app.post("/outboundEmailRequests", (req, res) => {
-  routemailRouterer.email.postEmail(req, res);
+  emailRouter.email.postEmail(req, res);
 });
 
+//static routes
+app.use("/portAirfieldDataPoints", express.static(__dirname + '/static/portAirfieldDataPoints.html')); 
 //cover api routes from front end
-app.use("/skills", express.static(__dirname + '/client')) 
-app.use("/jobs", express.static(__dirname + '/client'))
-app.use("/experiences", express.static(__dirname + '/client')) 
-app.use("/about", express.static(__dirname + '/client')) 
+app.use("/skills", express.static(__dirname + '/client'));
+app.use("/jobs", express.static(__dirname + '/client'));
+app.use("/experiences", express.static(__dirname + '/client'));
+app.use("/about", express.static(__dirname + '/client'));
 
 let HOST = "";
 const PORT = process.env.PORT || 8080;
