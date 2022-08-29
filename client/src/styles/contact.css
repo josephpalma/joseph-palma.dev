@@ -27,6 +27,7 @@
 .contact-text {
   text-align: center;
   margin-bottom: -10px !important;
+  color: var(--typed-text-color);
 }
 
 .field-wrapper {

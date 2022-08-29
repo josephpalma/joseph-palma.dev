@@ -7,9 +7,9 @@ const SimpleCrypto = require('simple-crypto-js').default;
 const crypt = new SimpleCrypto(config.crypt.key);
 const event = new Date(Date.now());
 const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
+const path = require('path');
 
 const readHTMLFile = function (path, callback) {
-  console.log("in readHtml : ",path);
   fs.readFile(path, { encoding: 'utf-8' }, function (err, html) {
     if (err) {
       callback(err);
@@ -43,7 +43,7 @@ const sendEmail = async function (body) {
     }
   });
 
-  readHTMLFile(__dirname + `/template.html`, function (err, html) {
+  readHTMLFile(path.join(__dirname, `..`, `static`, `emailTemplate.html`), function (err, html) {
     if (err) {
       console.log("email service, readHTML() error: ", err);
       throw err;

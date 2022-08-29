@@ -12,7 +12,7 @@ function Introduction({ isDarkTheme, tablet }) {
         <Spacer axis="vertical" size={4} />
         <div className="intro-headers">
           <Typography variant="h6" component="h6" color={isDarkTheme ? 'text.light' : 'text.dark'} className="header" style={{ display: 'inline', lineHeight: '50px' }}>
-            Aloha,
+            Hi,
           </Typography>
           <Typography variant="h6" component="h6" color={isDarkTheme ? 'text.light' : 'text.dark'} className="header" style={{ display: 'inline', lineHeight: '50px' }}>
               &nbsp;my name is&nbsp;
@@ -36,7 +36,7 @@ function Introduction({ isDarkTheme, tablet }) {
           {introduction.title.occupation}&nbsp;
         </Typography>
         <Typography color={isDarkTheme ? 'text.light' : 'text.dark'} variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
-          {introduction.intro.location}&nbsp;
+          with a passion for {introduction.title.position} development.&nbsp;
         </Typography>
       </div>
       {tablet === false ? (

@@ -2,6 +2,7 @@ import DOMPurify from 'dompurify';
 import React, { useEffect, useState } from 'react';
 import { Button, CircularProgress } from '@mui/material';
 import Spacer from '../../styled-components/Spacer';
+import ExperienceInnerHtml from './ExperienceInnerHtml';
 
 function ExperienceContent({
   styles = {},
@@ -23,17 +24,34 @@ function ExperienceContent({
       } catch (error) {
         console.log('failed to fetch more content');
       }
-
       setMoreContentHTML(data);
     }
   }, [readMore, content]);
 
+  const outHtml = DOMPurify.sanitize(moreContentHTML, {
+    FORCE_BODY: true,
+    ALLOWED_ATTR: ['style', 'class', 'type', 'id', 'href', 'rel', 'aria-label', 'onClick'],
+    ALLOWED_TAGS: [
+      'html',
+      'head',
+      'style',
+      'body',
+      'a',
+      'title',
+      'meta',
+      'ul',
+      'li',
+      'div',
+      'td',
+      'p',
+      'h4',
+    ],
+  });
+
   const moreContent = (
     <>
       {moreContentHTML !== null ?
-        <div id='more-content'>
-          <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(moreContentHTML) }} />
-        </div> :
+        <ExperienceInnerHtml outHtml={outHtml} innerHtml={moreContentHTML} /> :
         <div style={{ textAlign: 'center' }}><CircularProgress color="primary" /></div>
       }
     </>
@@ -46,6 +64,7 @@ function ExperienceContent({
         style={mobile ? styles.mobileProjectDescriptionStyle : {}}
         aria-label="Project description"
       >
+
         {userDesc ? <p className="project-info_description-text">{userDesc}</p> : <></>}
         {techDesc ? <p className="project-info_description-text">{techDesc}</p> : <></>}
         {!readMore ? <></> : moreContent}
@@ -59,7 +78,7 @@ function ExperienceContent({
               referrerPolicy="no-referrer"
               type='button'
               style={!readMore ? styles.readMoreClosedButton : {}}
-            >Read {!readMore ? 'More' : 'Less' }</Button>
+            >Read {!readMore ? 'More +' : 'Less -' }</Button>
           </div> :
           <></>
         }

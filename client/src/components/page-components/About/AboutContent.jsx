@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typography, CircularProgress } from '@mui/material';
 import useLinkParser from '../../hooks/useLinkParser';
+import introduction from '../../../assets/introduction.json';
 
 function AboutContent({ content, setTab }) {
   const intro = useLinkParser(content[0].intro, 20);
@@ -32,7 +33,8 @@ function AboutContent({ content, setTab }) {
             </Typography>
             <br />
             <Typography as="p" variant="body1">
-              Currently I am looking for a role as a Front-end Engineer,&nbsp;
+              Currently, I am looking for an {introduction.title.level} level position
+              as a {introduction.title.position} Engineer,&nbsp;
               <div
                 className="hover-underline-animation about-link"
                 style={{ cursor: 'pointer' }}

@@ -1,9 +1,9 @@
 {
   "title": {
     "name": "Joseph Palma",
-    "occupation": "Software Developer",
-    "position": "entry-level",
-    "fields": "Front-End Software Developer"
+    "occupation": "Software Engineer",
+    "level": "associate",
+    "position": "Front-End"
   },
   "intro": {
     "location": "based out of Honolulu, Hawai'i.",
