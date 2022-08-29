@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
 // Parses string with links into renderable elements
 // constraint is the number of links. provide this value to prevent premature rendering
 const useLinkParser = (text, constraint = 1) => {
   const [data, setData] = useState([]);
+  const cache = useRef({});
 
   const linkParser = (text) => {
     let i = 0; let l = 0; let k = 0;
@@ -55,10 +56,14 @@ const useLinkParser = (text, constraint = 1) => {
       }
       renderables.push(text[i]);
     }
+    cache.current[text.substring(1, 25)] = renderables;
     return renderables;
   };
 
   useEffect(() => {
+    if (cache.current[text.substring(1, 25)]) {
+      return cache.current[text.substring(1, 25)];
+    }
     setData(linkParser(text));
   }, []);
 
