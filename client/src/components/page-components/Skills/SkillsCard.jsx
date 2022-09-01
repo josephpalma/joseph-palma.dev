@@ -6,7 +6,7 @@ function SkillsCard({ mobile, index, logo, fontSize, isDarkTheme, name }) {
   const darkBackground = 'rgb(0,0,0)';
   const darkMozBackground = '-moz-linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(54, 97, 148, 0.5) 100%)';
   const darkWebkitBackground = '-webkit-linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(54, 97, 148, 0.5) 100%)';
-  const darkGradient = 'linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(54, 97, 148, 0.5) 100%)';
+  const darkGradient = 'linear-gradient(20deg, rgba(18, 18, 18,0) 24%, rgba(39,39,39,1) 58%, rgba(54, 97, 148, 0.5) 100%)';
   const darkFilter = 'progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#616161",GradientType=1)';
 
   const lightBackground = 'rgb(255,255,255)';

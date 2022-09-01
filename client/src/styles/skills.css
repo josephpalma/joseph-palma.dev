@@ -4,7 +4,7 @@
   --master-background: rgb(255,255,255);
   --master-moz-background: -moz-linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(130, 233, 223,0.2079446778711485) 100%);
   --master-webkit-background: -webkit-linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(130, 233, 223,0.2079446778711485) 100%);
-  --master-gradient: linear-gradient(20deg, rgba(18, 18, 18,1) 24%, rgba(39,39,39,1) 58%, rgba(130, 233, 223,0.2079446778711485) 100%); 
+  --master-gradient: linear-gradient(20deg, rgba(18, 18, 18,0) 24%, rgba(39,39,39,1) 58%, rgba(130, 233, 223,0.2079446778711485) 100%); 
   --master-filter: none;
   --drop-shadow: none;
 }
