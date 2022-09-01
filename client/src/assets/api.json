@@ -16,5 +16,10 @@
   },
   "about": {
     "url": "https://jp-portfolio-site.herokuapp.com/about"
+  },
+  "dev": {
+    "moreContent": {
+      "url": "http://localhost:8080/moreContentTesting"
+    }
   }
 }

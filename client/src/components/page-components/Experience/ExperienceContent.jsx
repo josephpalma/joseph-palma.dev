@@ -3,6 +3,45 @@ import React, { useEffect, useState } from 'react';
 import { Button, CircularProgress } from '@mui/material';
 import Spacer from '../../styled-components/Spacer';
 import ExperienceInnerHtml from './ExperienceInnerHtml';
+import api from '../../../assets/api.json';
+
+const ALLOWED_ATTR = [
+  'style',
+  'class',
+  'type',
+  'id',
+  'href',
+  'rel',
+  'aria-label',
+  'onClick',
+  'alt',
+  'loading',
+  'src',
+];
+
+const ALLOWED_TAGS = [
+  'html',
+  'head',
+  'style',
+  'body',
+  'a',
+  'i',
+  'title',
+  'meta',
+  'figure',
+  'figcaption',
+  'ul',
+  'nav',
+  'img',
+  'li',
+  'div',
+  'td',
+  'p',
+  'h4',
+  'h5',
+  'h3',
+  'h6',
+];
 
 function ExperienceContent({
   styles = {},
@@ -14,12 +53,14 @@ function ExperienceContent({
   readMore = false,
 }) {
   const [moreContentHTML, setMoreContentHTML] = useState(null);
+  let dev = process.env.NODE_ENV;
 
   useEffect(async () => {
     let data = '';
-    if (readMore && content !== undefined) {
+    let url = dev ? api.dev.moreContent.url : content;
+    if ((readMore && content !== undefined) || dev) {
       try {
-        const response = await fetch(content);
+        const response = await fetch(url);
         data = await response.text();
       } catch (error) {
         console.log('failed to fetch more content');
@@ -28,25 +69,7 @@ function ExperienceContent({
     }
   }, [readMore, content]);
 
-  const outHtml = DOMPurify.sanitize(moreContentHTML, {
-    FORCE_BODY: true,
-    ALLOWED_ATTR: ['style', 'class', 'type', 'id', 'href', 'rel', 'aria-label', 'onClick'],
-    ALLOWED_TAGS: [
-      'html',
-      'head',
-      'style',
-      'body',
-      'a',
-      'title',
-      'meta',
-      'ul',
-      'li',
-      'div',
-      'td',
-      'p',
-      'h4',
-    ],
-  });
+  const outHtml = DOMPurify.sanitize(moreContentHTML, { FORCE_BODY: true, ALLOWED_ATTR, ALLOWED_TAGS });
 
   const moreContent = (
     <>
@@ -65,10 +88,10 @@ function ExperienceContent({
         aria-label="Project description"
       >
 
-        {userDesc ? <p className="project-info_description-text">{userDesc}</p> : <></>}
-        {techDesc ? <p className="project-info_description-text">{techDesc}</p> : <></>}
+        {(userDesc && !readMore) ? <p className="project-info_description-text">{userDesc}</p> : <></>}
+        {(userDesc && !readMore) ? <p className="project-info_description-text">{techDesc}</p> : <></>}
         {!readMore ? <></> : moreContent}
-        {content ?
+        {content || dev ?
           <div>
             <Spacer axis="vertical" size={10} />
             <Button

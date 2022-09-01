@@ -33,6 +33,14 @@ app.post("/outboundEmailRequests", (req, res) => {
   emailRouter.email.postEmail(req, res);
 });
 
+//test more content route
+if (!process.env.NODE_ENV) {
+  const moreContentTest = "./static/MANDADashMoreContent.html";
+  app.get("/moreContentTesting", (req, res) => {
+    res.sendFile(moreContentTest, { root: __dirname });
+  })
+}
+
 //static routes
 app.use("/portAirfieldDataPoints", express.static(__dirname + '/static/portAirfieldDataPoints.html')); 
 //cover api routes from front end
