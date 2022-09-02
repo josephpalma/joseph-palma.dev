@@ -19,6 +19,7 @@ import useAnimation from './components/hooks/useAnimation';
 import ContactForm from './components/page-components/Contact/ContactForm';
 import theme from './assets/theme';
 import Footer from './components/styled-components/Footer';
+import useWaitForElm from './components/hooks/useWaitForElm';
 
 function App() {
   const [isDarkTheme, setIsDarkTheme] = useStickyState(true, 'themePreference');
@@ -47,28 +48,8 @@ function App() {
     return null;
   };
 
-  const waitForElm = (selector) => {
-    return new Promise((resolve) => {
-      if (document.querySelector(selector)) {
-        resolve(document.querySelector(selector));
-      }
-
-      const observer = new MutationObserver(() => {
-        if (document.querySelector(selector)) {
-          resolve(document.querySelector(selector));
-          observer.disconnect();
-        }
-      });
-
-      observer.observe(document.body, {
-        childList: true,
-        subtree: true,
-      });
-    });
-  };
-
   useEffect(async () => {
-    const tabContent = await waitForElm(`#_${tab.toLowerCase()}`);
+    const tabContent = await useWaitForElm(`#_${tab.toLowerCase()}`);
     useAnimation(tabContent, 'fadeIn', 0.9);
   }, [tab]);
 

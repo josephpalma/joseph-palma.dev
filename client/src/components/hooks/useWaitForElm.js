@@ -1,5 +1,6 @@
 /*
  * Hook to async await for a given html element to render in DOM
+ * args: html selector
 */
 function useWaitForElm(selector) {
   return new Promise((resolve) => {
