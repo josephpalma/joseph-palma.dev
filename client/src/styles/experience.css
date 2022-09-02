@@ -262,6 +262,7 @@
 
 .read-more_button:hover {
   background-color: 0 !important;
+  color: var(--primary-color_stronger) !important;
 }
 
 .more-content {

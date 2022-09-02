@@ -30,6 +30,7 @@ const ALLOWED_TAGS = [
   'body',
   'a',
   'i',
+  'b',
   'title',
   'meta',
   'figure',
@@ -80,7 +81,9 @@ function ExperienceContent({
     <>
       {moreContentHTML !== null ?
         <ExperienceInnerHtml outHtml={outHtml} innerHtml={moreContentHTML} /> :
-        <div style={{ textAlign: 'center' }}><CircularProgress color="primary" /></div>
+        <div style={{ textAlign: 'center', padding: '25px' }}>
+          <CircularProgress color="primary" />
+        </div>
       }
     </>
   );
@@ -108,9 +111,8 @@ function ExperienceContent({
         style={mobile ? styles.mobileProjectDescriptionStyle : {}}
         aria-label="Project description"
       >
-
-        {(userDesc && !readMore) ? <p className="project-info_description-text">{userDesc}</p> : <></>}
-        {(userDesc && !readMore) ? <p className="project-info_description-text">{techDesc}</p> : <></>}
+        {(userDesc.length > 0 && !readMore) ? <p className="project-info_description-text">{userDesc}</p> : <></>}
+        {(techDesc.length > 0 && !readMore) ? <p className="project-info_description-text">{techDesc}</p> : <></>}
         {!readMore ? <></> : moreContent}
         {content || dev ?
           <div>
@@ -118,8 +120,10 @@ function ExperienceContent({
             <Button
               variant='raised'
               onClick={handleMore}
-              className="hover-underline-animation read-more_button"
+              className="read-more_button"
               referrerPolicy="no-referrer"
+              disableFocusRipple
+              disableRipple
               type='button'
               style={!readMore ? styles.readMoreClosedButton : {}}
             >Read {!readMore ? 'More +' : 'Less -' }</Button>

@@ -4,6 +4,7 @@
 <head>
   <title></title>
   <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <style>
     .read-more_grid {
       display: grid;
@@ -27,58 +28,166 @@
       padding: 0;
       margin: 5.5px 0 5.5px 0;
     }
+    .landing__play-btn-triangle {
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      height: 3.45em;
+      width: 3.45em;
+      position: relative;
+      left: -1.8em;
+      top: 0.5em;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+  }
+  .landing__play-btn {
+      position: relative;
+      top: 2.67em;
+      left: 1.3em;
+      margin: auto;
+      width: 4em;
+      height: 4.5em;
+      border-left: 2px solid floralwhite;
+  }
+  .landing__play-btn-outer {
+      transform: scale(0.40);
+      flex: none;
+      width: 10em;
+      height: 10em;
+      border: 2px solid;
+      border-radius: 50%;
+      cursor: pointer;
+      color: floralwhite;
+  }
+  .landing__info {
+    margin-left: -30px;
+    font-family: 'nimbus-sans-extended','alda',sans-serif;
+    overflow-y: hidden;
+  }
+  .landing__info > p {
+    margin: 0;
+    padding: 0;
+  }
+  .landing__box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 85px;
+    width: fit-content;
+    text-overflow: ellipsis;
+  }
+  .landing__pause-btn-l {
+    margin: 0 8px 0 2.75em;
+    top: 30%;
+    position: relative;
+    width: 1.5em;
+    height: 4em;
+    border: solid 2px #fff;
+    float: left;
+  }
+  .landing__pause-btn-r {
+    margin: 0 8px;
+    top: 30%;
+    position: relative;
+    width: 1.5em;
+    height: 4em;
+    border: solid 2px #fff;
+    float: left;
+  }
   </style>
 </head>
 
+<body>
+<script>
+  function playButtonClick() {
+    document.getElementById('pause-button').style.display = 'inherit';
+    document.getElementById('play-button').style.display = 'none';
+  }
+  function pauseButtonClick() {
+    document.getElementById('play-button').style.display = 'inherit';
+    document.getElementById('pause-button').style.display = 'none';
+  }
+</script>
 <div class="read-more_content">
   <div class="read-more_grid">
     <div>
-      <h4 class="read-more_content-title">KTUH In The Community</h4>
+      <h4 class="read-more_content-title" style="margin-top: 0">KTUH In The Community</h4>
       <p class="read-more_content-p">
-        KTUH FM is a public, college radio station which broadcasts live on the air 24/7 in Hawai’i. On O’ahu, 
+        KTUH FM is a public, college radio station broadcasting live on the air 24/7 in Hawai’i. On O’ahu, 
         where the only other public radio station is NPR, KTUH is a staple in the community.
-        With 10% of its 20,000 daily listeners tuning in online - the stream has become a signature of the station, 
+        With <i>10%</i> of its 20,000 daily listeners tuning in online - the stream has become a signature of the station, 
         allowing greater access to broadcasts within the community and around the world.        
       </p>
       <h4 class="read-more_content-title">Challenges</h4>
       <p class="read-more_content-p">
         We heard stories from DJ’s, listeners, administrators and staff, which helped us gain a better insight into the needs of users. Stories were then broken into three categories:
       </p>
-      <ul style="list-style: square">
+      <ul style="list-style: none">
         <li>
-          <p class="read-more_content-p">
-            Content management - with the constant churn of student employee’s, how do we utilize a content management system to provide as little onboarding overhead as possible?
+          <div class="description-point">&gt;</div>
+          <p class="read-more_content-p" style="display: inline;">
+            Content management
+          </p>
+          <p class="read-more_content-p" style="padding-left: 30px;">
+            With the constant churn of student employee’s, how do we utilize a content management system to provide as little onboarding overhead as possible?
           </p>
         </li>
         <li>
-          <p class="read-more_content-p">
-            A Non-Dedicated Server - we want to build a back-end system that is maintainable by university IT staff, whose load is tethered to the resources of the university.
+          <div class="description-point">&gt;</div>
+          <p class="read-more_content-p"  style="display: inline;">
+            A Non-Dedicated Server
+          </p>
+          <p class="read-more_content-p"  style="padding-left: 30px;">
+            We want to build a back-end system that is maintainable by university IT staff, whose load is tethered to the resources of the university.
           </p>
         </li>
         <li>
-          <p class="read-more_content-p">
-            UX Concerns - an outdated stream player. How can we keep the stream playing while users navigate the site? 
+          <div class="description-point">&gt;</div>
+          <p class="read-more_content-p"  style="display: inline;">
+            UX Concerns        
+          </p>
+          <p class="read-more_content-p"  style="padding-left: 30px;">
+            How can we keep the stream playing while users navigate the site? 
             How do we modernize the player while keeping a tradional FM radio feel?        
           </p>
-          <!-- HAVE PICTURE OF PLAYER CSS ONLY -->
-          <!-- HAVE IT SAY KTUH FM HONOLULU AND SONG AND ARTIST NAME  -->
-          <!-- INCLUDE PROJECT ROLE: PM, LEAD DEV IN SIDEBAR -->
+          <div class="landing__box">
+            <div class="landing__play-btn-outer">
+              <div id="play-button" class="landing__play-btn" onClick="return playButtonClick()">
+                <div class="landing__play-btn-triangle"></div>
+              </div>
+              <div id="pause-button" onClick="return pauseButtonClick()" style="display: none; margin: 45px 0 0 0; padding-left: 2px;">
+                <div class="landing__pause-btn-l"></div>
+                <div class="landing__pause-btn-r"></div>
+              </div>
+            </div>
+            <div class="landing__info">
+              <p><b>KTUH FM HONOLULU</b></p>
+              <p>SONG ARTIST</p>
+              <p>SONG NAME</p>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
     <div>
-      <h4 class="read-more_content-title">Timeline</h4>
+      <h4 class="read-more_content-title" style="margin-top: 0;">Timeline</h4>
       <p class="read-more_content-p">July 2019 - Jan 2020</p>
       <h4 class="read-more_content-title">Teammates</h4>
-      <p class="read-more_content-p">Derek Chan - Back-end Programmer</p>
-      <p class="read-more_content-p">Joseph Paragas - Assistant Programmer</p>
+      <p class="read-more_content-p">Derek Chan - Back-end Developer</p>
+      <p class="read-more_content-p">Joseph Paragas - Assistant Developer</p>
       <p class="read-more_content-p">Bjarne Bartlett - Station Manager</p>
+      <h4 class="read-more_content-title">My Role</h4>
+      <p class="read-more_content-p">Front-end Developer, Project Manager</p>
       <h4 class="read-more_content-title">Tech Stack</h4>
       <p class="read-more_content-p">React</p>
       <p class="read-more_content-p">Wordpress</p>
       <p class="read-more_content-p">PHP REST API</p>
       <p class="read-more_content-p">Apache</p>
       <p class="read-more_content-p">Dedicated Server</p>
+
     </div>
   </div>
   <div>
@@ -103,4 +212,5 @@
     </p>
   </div>
 </div>
+</body>
 </html>

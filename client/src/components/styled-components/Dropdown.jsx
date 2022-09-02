@@ -67,6 +67,7 @@ function Dropdown({
   const dropDownStyles = { ...addContent.styles, ...{ readMoreClosedButton } };
 
   const adjustableMargin = screenWidth * (screenWidth > 500 ? 0.03 : 0.001);
+
   return (
     <div className={className}>
       {!isOpen ?
@@ -99,8 +100,8 @@ function Dropdown({
             >
               <KeyboardArrowUpIcon />
             </span>
-            {primaryText ? <p className='project-info_description-text open-dropdown-item'>{primaryText}</p> : <></>}
-            {secondaryText ? <p className='project-info_description-text open-dropdown-item'>{secondaryText}</p> : <></>}
+            {primaryText.length > 0 && !addContent.readMore ? <p className='project-info_description-text open-dropdown-item'>{primaryText}</p> : <></>}
+            {secondaryText.length > 0 && !addContent.readMore ? <p className='project-info_description-text open-dropdown-item'>{secondaryText}</p> : <></>}
 
           </p>
           <ExperienceContent

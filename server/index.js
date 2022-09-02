@@ -35,7 +35,7 @@ app.post("/outboundEmailRequests", (req, res) => {
 
 //test more content route
 if (!process.env.NODE_ENV) {
-  const moreContentTest = "./static/MANDADashMoreContent.html";
+  const moreContentTest = "./static/KTUHMoreContent.html";
   app.get("/moreContentTesting", (req, res) => {
     res.sendFile(moreContentTest, { root: __dirname });
   })

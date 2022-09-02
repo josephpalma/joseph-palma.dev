@@ -26,7 +26,8 @@ const mobileStyles = {
   },
   projectInfoDescription: {
     width: '100%',
-    marginTop: '-26px',
+    marginTop: '-16px',
+    padding: '5px',
   },
   projectInfoTechnologies: {
     width: '80%',
