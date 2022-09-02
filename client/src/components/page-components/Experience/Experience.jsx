@@ -16,11 +16,11 @@ function Experience({ isDarkTheme, screenWidth }) {
   document.body.style.setProperty('--mono_font-family-light', isDarkTheme ? 'var(--mono_font-family)' : 'JetBrains Mono Medium');
   document.body.style.setProperty('--padding-experiences', screenWidth < 898 ? 'none' : '20px 0 0 0');
 
-  const makeExperiencesList = (inData) => {
-    inData.sort((a, b) => a.Order - b.Order);
+  const makeExperiencesList = () => {
+    data.sort((a, b) => a.Order - b.Order);
     return (
       <ul className="projects-list">
-        {inData.map((item) => (
+        {data.map((item) => (
           <ExperienceItem
             title={item.Title}
             techDescription={item.TechnicalDescription}
@@ -30,6 +30,7 @@ function Experience({ isDarkTheme, screenWidth }) {
             photo={item.Photo}
             technologies={item.Technologies}
             moreContent={item.MoreContent}
+            moreContentSize={item.MoreContentSize}
             screenWidth={screenWidth}
             isDarkTheme={isDarkTheme}
             key={item.Title}
@@ -50,7 +51,7 @@ function Experience({ isDarkTheme, screenWidth }) {
         </div>)
       }
       {status === 'fetching' && (<div className="spinner"><CircularProgress color="primary" /></div>)}
-      {status === 'fetched' && makeExperiencesList(data)}
+      {status === 'fetched' && makeExperiencesList()}
     </section>
   );
 }

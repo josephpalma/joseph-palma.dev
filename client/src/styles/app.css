@@ -143,11 +143,6 @@ html {
   color: var(--navtabs-color) !important;
 }
 
-.navtabs:focus {
-  color: var(--primary-color) !important; 
-  font-family: 'San Francisco Bold' !important;
-}
-
 .hover-underline-animation {
   display: inline-block;
   position: relative;
@@ -159,16 +154,16 @@ html {
   position: absolute;
   width: 100%;
   transform: scaleX(0);
-  height: 2px;
+  height: 1.3px;
   bottom: 0;
   left: 0;
   background-color: var(--primary-color);
   transform-origin: bottom right;
-  transition: transform 0.50s ease-out;
+  transition: transform 0.50s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .hover-underline-animation:hover:after {
-  transform: scaleX(1);
+  transform: scaleX(0.99);
   transform-origin: bottom left;
 }
 
