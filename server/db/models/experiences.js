@@ -47,6 +47,11 @@ const ExperiencesSchema = new mongoose.Schema({
   },
   moreContent: {
     required: false,
+  },
+  moreContentSize: {
+    required: false,
+    type: String,
+    trim: true
   }
 }, {
   collection: "Experiences"

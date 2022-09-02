@@ -17,12 +17,16 @@ const ALLOWED_ATTR = [
   'alt',
   'loading',
   'src',
+  'target',
+  'rel',
+  'referrerPolicy',
 ];
 
 const ALLOWED_TAGS = [
   'html',
   'head',
   'style',
+  'button',
   'body',
   'a',
   'i',
@@ -51,6 +55,7 @@ function ExperienceContent({
   content = undefined,
   handleMore = null,
   readMore = false,
+  moreContentSize,
 }) {
   const [moreContentHTML, setMoreContentHTML] = useState(null);
   let dev = process.env.NODE_ENV;
@@ -80,8 +85,24 @@ function ExperienceContent({
     </>
   );
 
+  const setMoreContentSize = () => {
+    if (moreContentSize === 'large') {
+      return {
+        width: '120%',
+        margin: '10px 0 0 -20%',
+      };
+    }
+    if (moreContentSize === 'medium') {
+      return {
+        width: '115%',
+        margin: '10px 0 0 -15%',
+      };
+    }
+    return {};
+  };
+
   return (
-    <div className={readMore || mobile ? 'more-content' : 'less-content'}>
+    <div className={readMore || mobile ? 'more-content' : 'less-content'} style={readMore ? setMoreContentSize() : {}}>
       <section
         className="project-info_description"
         style={mobile ? styles.mobileProjectDescriptionStyle : {}}

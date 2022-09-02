@@ -46,6 +46,7 @@ function ExperienceItem({
   userDescription,
   technologies,
   moreContent,
+  moreContentSize,
 }) {
   const [readMore, setReadMore] = useState(false);
 
@@ -159,6 +160,7 @@ function ExperienceItem({
               techDesc={techDescription}
               content={moreContent}
               handleMore={handleMore}
+              moreContentSize={moreContentSize}
               readMore={readMore}
             />
           }
