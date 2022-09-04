@@ -153,6 +153,30 @@
         display: none !important;
       }
     }
+    @media screen and (max-width: 530px) {
+      a[id="Tech Reqs"] {
+        display: inherit !important;
+      }
+      a[id="Tech Requirements"] {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 455px) {
+      .subnav-item {
+        padding: 9px 10px 7px 10px !important;
+      }
+      a[id="Dashboard"] {
+        display: inherit !important;
+      }
+      a[id="Scrape & Display"] {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 380px) {
+      .subnav {
+        display: grid;
+      }
+    }
   </style>
 </head>
 
@@ -187,6 +211,7 @@
     let hiddenPage1; 
     let hiddenPage2;
     document.getElementById('Tech Requirements').style.backgroundColor = 'transparent'; 
+    document.getElementById('Tech Reqs').style.backgroundColor = 'transparent'; 
     document.getElementById('Data Access').style.backgroundColor = 'transparent'; 
     document.getElementById('Scrape & Display').style.backgroundColor = 'transparent'; 
     if (newTab.includes('Tech')) {
@@ -211,7 +236,7 @@
       visiblePage = document.getElementById('subpage-2');
       hiddenPage1 = document.getElementById('subpage-1');
       hiddenPage2 = document.getElementById('subpage-3');
-    } else if (newTab.includes('Scrape')) {
+    } else if (newTab.includes('Scrape') || newTab.includes('Dash')) {
       document.getElementById('Scrape & Display').style.backgroundColor = 'var(--primary-color_strong)'; 
       document.getElementById('Scrape & Display').style.fontFamily= 'San Francisco Bold'; 
       document.getElementById('Data Access').style.fontFamily= 'San Francisco'; 
@@ -272,8 +297,10 @@
   <div class="subnav-content" style="padding-top: 25px;">
     <nav class="subnav" aria-label="Sub article tabs">
       <a class="subnav-item" id="Tech Requirements" style="background-color: var(--primary-color_strong); font-family: 'San Francisco Bold';" onClick="return handleChange(event)">Tech Requirements</a>
+      <a class="subnav-item" id="Tech Reqs" style="background-color: var(--primary-color_strong); font-family: 'San Francisco Bold'; display:none" onClick="return handleChange(event)">Tech Reqs</a>
       <a class="subnav-item" id="Data Access" onClick="return handleChange(event)">Data Access</a>
       <a class="subnav-item" id="Scrape & Display" onClick="return handleChange(event)">Scrape & Display</a>
+      <a class="subnav-item" id="Dashboard" style="display:none" onClick="return handleChange(event)">Dashboard</a>
     </nav>
 
     <div class="subnav-inner">

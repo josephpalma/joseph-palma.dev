@@ -1,8 +1,9 @@
 const EncryptedEmails = require("../db/models/emails.js");
 const emailService = require("../services/emailService.js");
-const config = require("../config/develop.js");
+const dotenv = require('dotenv');
+dotenv.config({ path: __dirname + '/../.env' });
 const SimpleCrypto = require('simple-crypto-js').default;
-const crypt = new SimpleCrypto(config.crypt.key);
+const crypt = new SimpleCrypto(process.env.cryptoKey);
 
 const emailRouter = {
   

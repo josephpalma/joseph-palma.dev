@@ -71,6 +71,9 @@
 }
 
 @media (max-width: 999px) {
+  .intro-header_text {
+    white-space: inherit;
+  }
   .img-box {
     margin: -18px auto 34px auto !important;
     transform: translate(5px,20%);

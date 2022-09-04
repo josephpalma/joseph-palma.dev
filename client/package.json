@@ -25,7 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "simple-build": "react-scripts build",
-    "build": "react-scripts build && Xcopy C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\client\\build C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\build\\client /E /H /C /I && rmdir /s C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\client\\build",
+    "build": "react-scripts build && Xcopy C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\client\\build C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\build\\client /E /H /C /I && rmdir /s C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\client\\build && Xcopy C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\server C:\\Users\\joepa\\Documents\\GitHub\\josephpalma.dev\\build /E /H /C /I",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"

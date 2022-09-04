@@ -1,6 +1,7 @@
-const config = require("../../config/develop.js");
+const dotenv = require('dotenv');
+dotenv.config({ path: __dirname + '/../../.env' });
 const mongoose = require("mongoose");
-const uri = config.database.dbUri;
+const uri = process.env.dbUri;
 let connection = false;
 
 const pingDatabase = async (req, res) => {

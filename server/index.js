@@ -33,17 +33,19 @@ app.post("/outboundEmailRequests", (req, res) => {
   emailRouter.email.postEmail(req, res);
 });
 
+app.get("/portAirfieldDataPoints", (req, res) => {
+  res.sendFile('./static/portAirfieldDataPoints.html', { root: __dirname });
+});
+
 //test more content route
 if (!process.env.NODE_ENV) {
-  const moreContentTest = "./static/KTUHMoreContent.html";
+  const moreContentTest = "./static/MANDADashMoreContent.html";
   app.get("/moreContentTesting", (req, res) => {
     res.sendFile(moreContentTest, { root: __dirname });
-  })
+  });
 }
 
 //static routes
-app.use("/portAirfieldDataPoints", express.static(__dirname + '/static/portAirfieldDataPoints.html')); 
-//cover api routes from front end
 app.use("/skills", express.static(__dirname + '/client'));
 app.use("/jobs", express.static(__dirname + '/client'));
 app.use("/experiences", express.static(__dirname + '/client'));

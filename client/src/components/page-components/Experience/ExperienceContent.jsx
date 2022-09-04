@@ -59,7 +59,7 @@ function ExperienceContent({
   moreContentSize,
 }) {
   const [moreContentHTML, setMoreContentHTML] = useState(null);
-  let dev = process.env.NODE_ENV;
+  let dev = process.env.NODE_ENV !== 'production';
 
   useEffect(async () => {
     let data = '';
@@ -103,7 +103,6 @@ function ExperienceContent({
     }
     return {};
   };
-
   return (
     <div className={readMore || mobile ? 'more-content' : 'less-content'} style={readMore ? setMoreContentSize() : {}}>
       <section

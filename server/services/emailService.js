@@ -1,10 +1,11 @@
 const nodemailer = require("nodemailer");
-const config = require("../config/develop.js");
+const dotenv = require('dotenv');
+dotenv.config({ path: __dirname + '/../.env' });
 const EncryptedEmails = require("../db/models/emails.js");
 const handlebars = require('handlebars');
 const fs = require('fs');
 const SimpleCrypto = require('simple-crypto-js').default;
-const crypt = new SimpleCrypto(config.crypt.key);
+const crypt = new SimpleCrypto(process.env.cryptoKey);
 const event = new Date(Date.now());
 const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
 const path = require('path');
@@ -36,10 +37,10 @@ const storeEmail = function (body, info) {
 
 const sendEmail = async function (body) {
   const transporter = nodemailer.createTransport({
-    service: config.email.service,
+    service: process.env.emailService,
     auth: {
-      user: config.email.user,
-      pass: config.email.pass,
+      user: process.env.emailUser,
+      pass: process.env.emailPass,
     }
   });
 
@@ -59,8 +60,8 @@ const sendEmail = async function (body) {
     let htmlToSend = template(replacements);
 
     const options = {
-      from: config.email.user,
-      to: config.email.user,
+      from: process.env.emailUser,
+      to: process.env.emailPass,
       subject: 'Inquiry from josephpalma.dev',
       html: htmlToSend
     }
