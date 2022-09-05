@@ -103,8 +103,12 @@ function ExperienceContent({
     }
     return {};
   };
+
   return (
-    <div className={readMore || mobile ? 'more-content' : 'less-content'} style={readMore ? setMoreContentSize() : {}}>
+    <div
+      className={readMore || mobile ? `more-content ${mobile ? 'more-content-mobile' : ''}` : 'less-content'}
+      style={readMore ? setMoreContentSize() : {}}
+    >
       <section
         className="project-info_description"
         style={mobile ? styles.mobileProjectDescriptionStyle : {}}

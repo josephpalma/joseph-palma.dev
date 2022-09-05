@@ -265,6 +265,10 @@
   color: var(--primary-color_stronger) !important;
 }
 
+.more-content-mobile {
+  margin: 0 0 6px 0 !important;
+}
+
 .more-content {
   margin: 10px 0 10px auto;
   transition: none;

@@ -36,7 +36,7 @@ function SkillsRow({ data, isDarkTheme, mobile, screenWidth, title }) {
   const titleRow = (
     <title style={{ display: 'inline-flex' }}>
       <Typography variant='h4' className='row-title'>{title}</Typography>
-      <div className="_">_</div>
+      {!mobile ? <div className="_">_</div> : <></>}
     </title>
   );
 

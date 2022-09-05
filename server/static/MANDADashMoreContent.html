@@ -152,6 +152,29 @@
       #satellite-img {
         display: none !important;
       }
+      .ui-inspo {
+        display: block !important;
+        text-align: center;
+      }
+      .ui-inspo-1 {
+        padding: 0 !important;
+      }
+      #ui-cards-mobile {
+        display:block !important;
+      }
+      #ui-cards-mobile > figure > a > img {
+        max-width: 225px !important;
+      }
+      #ui-cards-mobile > figure {
+        margin: 0;
+        text-align: center;
+      }
+      #ui-cards {
+        display: none !important;
+      }
+      #error-log-ui {
+        padding: 5px !important;
+      }
     }
     @media screen and (max-width: 530px) {
       a[id="Tech Reqs"] {
@@ -159,6 +182,16 @@
       }
       a[id="Tech Requirements"] {
         display: none;
+      }
+      .subtitle-div {
+        padding-left: 0;
+      }
+      .ideate-subtitle {
+        min-width: 50px !important;
+        text-align: right;
+      }
+      .plan-subtitle {
+        min-width: 25%;
       }
     }
     @media screen and (max-width: 455px) {
@@ -217,6 +250,7 @@
     if (newTab.includes('Tech')) {
       document.getElementById('Tech Requirements').style.backgroundColor = 'var(--primary-color_strong)'; 
       document.getElementById('Tech Requirements').style.fontFamily = 'San Francisco Bold'; 
+      document.getElementById('Tech Reqs').style.fontFamily = 'San Francisco Bold'; 
       document.getElementById('Data Access').style.fontFamily = 'San Francisco'; 
       document.getElementById('Scrape & Display').style.fontFamily = 'San Francisco'; 
       document.getElementsByClassName('subnav-inner')[0].style.borderRadius = '0 5px'; 
@@ -229,7 +263,9 @@
       document.getElementById('Data Access').style.backgroundColor = 'var(--primary-color_strong)'; 
       document.getElementById('Data Access').style.fontFamily = 'San Francisco Bold'; 
       document.getElementById('Tech Requirements').style.fontFamily = 'San Francisco'; 
+      document.getElementById('Tech Reqs').style.fontFamily = 'San Francisco'; 
       document.getElementById('Scrape & Display').style.fontFamily = 'San Francisco'; 
+      document.getElementById('Dashboard').style.fontFamily = 'San Francisco'; 
       document.getElementsByClassName('subnav-inner')[0].style.borderRadius = '5px'; 
       document.getElementById('Next Button').style.display = 'inherit'; 
       document.getElementById('Last Button').style.display = 'inherit'; 
@@ -239,8 +275,10 @@
     } else if (newTab.includes('Scrape') || newTab.includes('Dash')) {
       document.getElementById('Scrape & Display').style.backgroundColor = 'var(--primary-color_strong)'; 
       document.getElementById('Scrape & Display').style.fontFamily= 'San Francisco Bold'; 
+      document.getElementById('Dashboard').style.fontFamily= 'San Francisco Bold'; 
       document.getElementById('Data Access').style.fontFamily= 'San Francisco'; 
       document.getElementById('Tech Requirements').style.fontFamily= 'San Francisco'; 
+      document.getElementById('Tech Reqs').style.fontFamily= 'San Francisco'; 
       document.getElementById('Next Button').style.display = 'none'; 
       document.getElementById('Last Button').style.display = 'inherit'; 
       visiblePage = document.getElementById('subpage-3');
@@ -257,7 +295,7 @@
     <div style="overflow: inherit;">
       <!-- TOP LEVEL CONTENT  -->
       <div>
-        <p class="read-more_content-p">
+        <p class="read-more_content-p" style="width: 95%">
           <i>“My logisticians are a humorless lot... they know if my campaign fails, they are the first ones I will slay.” - Alexander the Great</i>     
         </p>
         <h4 class="read-more_content-title">Project Challenge</h4>
@@ -290,6 +328,11 @@
       <p class="read-more_content-p">Bede Fulton - Data Analytics</p>
       <h4 id="sidebar-title4" class="read-more_content-title">My Role</h4>
       <p class="read-more_content-p">Lead Developer, Project Manager</p>
+      <h4 id="sidebar-title4" class="read-more_content-title">Demo</h4>
+      <p class="read-more_content-p">Check out our</p>
+      <a href="https://en.wikipedia.org/wiki/ARPANET" class="read-more_content-p hover-underline-animation about-link" style="text-decoration: none; display:inline-flex" target="__blank" referrerPolicy="no-referrer" rel="external">
+        video
+      </a>
     </div>
   </div>
 
@@ -307,22 +350,24 @@
       <!-- TECH REQUIRMENTS -->
       <div id="subpage-1">
         <div>
-          <h4 class="read-more_content-title" style="margin-top: 0; ">Client Pain Points</h4>
+          <div>
+            <h4 class="read-more_content-title" style="margin-top: 0; ">Bureaucratic Web Architecture</h4>
+            <p class="read-more_content-p">
+              Several military projects over the past century have concentrated on developing speed and scalability for classified communication, 
+              in fact, the Internet itself was the outcome of a
+            </p>
+            <a href="https://en.wikipedia.org/wiki/ARPANET" class="read-more_content-p hover-underline-animation about-link" style="text-decoration: none;" target="__blank" referrerPolicy="no-referrer" rel="external">
+              military project</a>.
+            <p class="read-more_content-p">
+              However, modern protocols often create roadblocks that can stall logistical teams.
+            </p>
+            </p>
+          </div>
+          <h4 class="read-more_content-title">Client Pain Points</h4>
           <p class="read-more_content-p">
-            Existing logistical tools run on a secure private network, known as the Secure Internet Protocol Router Network (SIPRNet). These tools reliance on Controlled Unclassified Information (CUI) segregates a large subset of publicly available knowledge on the same locations. Complicated network permissions can also make it difficult for non-logisticians in the planning process to view the essential data they provide.   
-          </p>
-        </div>
-        <div>
-          <h4 class="read-more_content-title">Bureaucratic Web Architecture</h4>
-          <p class="read-more_content-p">
-            Several military projects over the past century have concentrated on developing speed and scalability for classified communication, 
-            in fact, the Internet itself was the outcome of a
-          </p>
-          <a href="https://en.wikipedia.org/wiki/ARPANET" class="read-more_content-p hover-underline-animation about-link" style="text-decoration: none;" target="__blank" referrerPolicy="no-referrer" rel="external">
-            military project</a>.
-          <p class="read-more_content-p">
-            However, modern SIPRNet protocols often create roadblocks that can stall logistical teams.
-          </p>
+            Existing logistical tools run on a secure private network, known as the Secure Internet Protocol Router Network (SIPRNet). 
+            Reliance on Controlled Unclassified Information (CUI) segregates publicly available knowledge from many SIPRNet applications. 
+            Complicated network permissions make it difficult for non-logisticians in the planning process to access the essential data they provide.
           </p>
         </div>
         <div>
@@ -330,22 +375,21 @@
           <ul style="list-style: none">
             <li>
               <div class="description-point">&gt;</div>
-              <p class="read-more_content-p">App must operate on the civilian internet</p>
+              <p class="read-more_content-p">App must operate on the civilian internet. No authorization, no problem.</p>
             </li>
             <li>
               <div class="description-point">&gt;</div>
               <p class="read-more_content-p">Data set must be:</p>
             </li>
             <ul style="list-style: none">
-              <li><div class="description-point">&gt;</div><p class="read-more_content-p">open source and non-CUI compliant</p></li>
-              <li><div class="description-point">&gt;</div><p class="read-more_content-p">easily integrable into SIPRNet programs</p></li>
+              <li><div class="description-point">&gt;</div><p class="read-more_content-p" style="padding-right: 20px">Open source and non-CUI compliant for added transportability and security.</p></li>
+              <li><div class="description-point">&gt;</div><p class="read-more_content-p" style="padding-right: 20px">Easily integrable into SIPRNet programs, a route for public information.</p></li>
             </ul>
           </ul>
         </div>
         <div>
           <div>
             <h4 class="read-more_content-title">Understand, Ideate and Iterate</h4>
-            <!-- <img class='img-gradient' style="max-width: 355px; max-height: 280px; padding-top: 5px;" alt="UI v0 screenshot" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20uiv1.png" /> -->
             <p class="read-more_content-p">
               Our sponsors elected for Tableau and Python, because of the ubiquity of Python in SIPRNet applications. However, when they learned about the license costs Tableau was scratched. 
               Instead, we worked with them to create a tech stack that would suit their needs and help us achieve the mission. 
@@ -353,7 +397,7 @@
             </p>
           </div>
           <div style="display: inline-flex; padding-top: 8px; padding-right: 10px;" class="subtitle-div">
-            <h5 class="read-more_content-title read-more_content-subtitle" style="min-width: 69px;">Design v1</h5>
+            <h5 class="read-more_content-title read-more_content-subtitle ideate-subtitle" style="min-width: 69px;">Design v1</h5>
             <p class="read-more_content-p" style="padding-left: 8px">
               Now it was time to start building. We approached our first system design looking to hit a homerun. However, we quickly found out we were over-scoped. 
               Design v1 contained features like route planning, obstacle detection, and a reachability function to search locations based on vehicle characteristics. 
@@ -361,15 +405,15 @@
             </p>
           </div>
           <div style="display: inline-flex; padding-top: 4px; padding-right: 10px;" class="subtitle-div">
-            <h5 class="read-more_content-title read-more_content-subtitle" style="min-width: 69px;">Design v2</h5>
+            <h5 class="read-more_content-title read-more_content-subtitle ideate-subtitle" style="min-width: 69px;">Design v2</h5>
             <p class="read-more_content-p" style="padding-left: 8px">
               Our second system design stripped back all the bells and whistles, and instead focused on scraping and displaying important data. We worked with our sponsors to 
               determine an initial set of data points – while leaving room for expansion. We were now at a good place to mock up a UI design. A common trend was noticed among logistical 
               presentations: displaying stats in a baseball card like fashion. This was our inspiration for a card-based UI.
             </p>
           </div>
-          <div style="display: flex; justify-content: center; padding-top: 12px;">
-            <figure style="margin: 0; padding-right: 20px">
+          <div style="display: flex; justify-content: center; padding-top: 12px;" class="ui-inspo">
+            <figure style="margin: 0; padding-right: 20px" class="ui-inspo-1">
                 <a href="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20portui0.png" target="__blank" style="text-decoration:none">
                   <img style="width: 100%; max-width: 400px; height: auto; vertical-align: top; border-radius: 4px;" class="img-expand" alt="DoD Powerpoint Port Data Card example" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20portui0.png" />
                   <figcaption class="image-caption read-more_content-p" style="display: block;">A common way logisticians organize data is in a ‘stat sheet’ format</figcaption>
@@ -390,14 +434,14 @@
           <div>
             <h4 class="read-more_content-title" style=" margin:0;">Niche Data Requirements</h4>
             <p class="read-more_content-p">
-              To start, our sponsors compiled a list of ~100 sources, however most were locked up behind the SIPRNet wall. 
+              To start, our sponsors compiled a list of ~100 sources, however most were locked up behind the SIPRNet permissions wall. 
               So we set out to find our own alternate, reliable sources - a task we ended up investing about ⅓ of our time into, 
               because as it turns out, searching “mooring points at Port Aitape, Papua New Guinea” doesn’t turn up any useful information. 
             </p>
           </div>
           <div style="padding-top: 12px">
             <p class="read-more_content-p">
-              In the end, we found the most value from Searates, World Port Index, Pub150 Index, and Maxar. Altogether we succeeded in sourcing <i>94%</i> of the
+              Most value ended up coming from Searates, World Port Index, Pub150 Index, and Maxar. Altogether we succeeded in sourcing <i>94%</i> of the
               <a href="https://josephpalma.dev/portAirfieldDataPoints" target="__blank" referrerPolicy="no-referrer" rel="external" class="read-more_content-p hover-underline-animation about-link" style="color: inherit; text-decoration: none;">
                 original data points
               </a>
@@ -418,7 +462,7 @@
               <p class="read-more_content-p" style="display: block">
                 With the goal of data autonomy and flexibility we designed a backend system that provides information in universal formats. 
               </p>
-              <p class="read-more_content-p" style="display: block">
+              <p class="read-more_content-p" style="display: block; padding-top: 5px">
                 Data is scraped into .csv’s where it is distributed to SIPRNet, and our MongoDB instance for use on the front-end. Everytime the scraper runs, backups are written to a separate DB, and each dataset is loaded with the latest information.
               </p>
             </div>
@@ -439,16 +483,14 @@
         </div>
         <div>
         <div class="subtitle-div" style="padding-top: 9px;">
-          <h5 class="read-more_content-title read-more_content-subtitle">Assemble Data Structures</h5>
+          <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle">Assemble Data Structures</h5>
           <p class="read-more_content-p" style="padding-left: 18px;">
             We worked with our sponsors to define a structure from our 
-            <a href="https://josephpalma.dev/portAirfieldDataPoints" target="__blank" referrerPolicy="no-referrer" rel="external" class="read-more_content-p hover-underline-animation about-link" style="color: inherit; text-decoration: none;">
-              data points.
-            </a>
+            <a href="https://josephpalma.dev/portAirfieldDataPoints" target="__blank" referrerPolicy="no-referrer" rel="external" class="read-more_content-p hover-underline-animation about-link" style="color: inherit; text-decoration: none;">data points</a>.
           </p>
         </div>
         <div style="padding-bottom: 15px;" class="subtitle-div">
-          <h5 class="read-more_content-title read-more_content-subtitle">Build Scraping Infrastructure</h5>
+          <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle">Build Scraping Infrastructure</h5>
           <p class="read-more_content-p" style="padding-left: 18px;">
             Some of our sources had protections against web crawlers, we were able to avoid them by implementing scraper timeouts. While this did extend the time to scrape - it also allowed for a much more thorough dataset. 
           </p>
@@ -456,11 +498,11 @@
         <div style="padding-bottom: 15px;" class="subtitle-div">
           <div>
             <div style="display: flex">
-              <h5 class="read-more_content-title read-more_content-subtitle" style="margin-top:9px">Efficient Presentation of Data</h5>
+              <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle" style="margin-top:9px">Efficient Presentation of Data</h5>
               <div style="padding-left: 16px; padding-right: 5px">
                 <p class="read-more_content-p" style="padding: 0 15px 0 0;">
-                  We were able to pull non-CUI publicly available information on certain vehicles, like C-130 and C-17 aircrafts, as well as first hand descriptions. We found satellite images with embedded 
-                  port and airfield asset descriptions. For locations without satellite images, we supplanted google maps satellite view.
+                  We were able to pull non-CUI publicly available information on certain vehicles, like C-130 and C-17 aircrafts, as well as first-hand descriptions. 
+                  Locations without first-hand descriptions used satellite images with embedded port and airfield asset descriptions.
                 </p>
                 <div id="ui-cards" style="padding-top: 30px; display: flex; justify-content: center;">
                   <figure style="margin: 0;">
@@ -484,16 +526,31 @@
                 <figcaption class="image-caption read-more_content-p">Satellite card</figcaption>
               </figure> 
             </div>
+            <div id="ui-cards-mobile" style="padding-top: 30px; display:none">
+              <figure style="margin: 0;">
+                <a href="https://storage.googleapis.com/portfolio-assets-bucket/manddash%20c130card.png" target="__blank">
+                  <img class="img-expand" style="width: 100%;max-width: 150px;height:auto; border-radius:4px; min-height: 70px; margin-right: 5px; margin-bottom: -6px;" alt="UI C130 card" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/manddash%20c130card.png" />
+                </a>
+                <figcaption class="image-caption read-more_content-p">Access card</figcaption>
+              </figure>
+              <figure style="margin: 0;">
+                <a href="https://storage.googleapis.com/portfolio-assets-bucket/manddash%20desccard.png" target="__blank">
+                  <img class="img-expand" style="width: 100%;max-width: 150px;height:auto; border-radius:4px; margin-bottom: -6px;"  alt="UI first hand description card" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/manddash%20desccard.png" />
+                </a>
+                <figcaption class="image-caption read-more_content-p">First hand description card</figcaption>
+              </figure>
+            </div>
 
           </div>
         </div>
+
         <div style="padding-bottom: 15px;" class="subtitle-div">
-          <h5 class="read-more_content-title read-more_content-subtitle">Dynamic Error Logging</h5>
+          <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle">Dynamic Error Logging</h5>
           <p class="read-more_content-p" style="padding-left:14px;">
             Many things could go wrong when scraping the web. Broken links, blocked connections or changes in formatting can all result in incomplete data. We want all users to have insight into error messages, and suggestions on how to fix them, so appropriate measures can be taken in the case of failure. To do this we implemented a logging system, which users can interact with from the front-end. 
           </p>
         </div>
-        <figure style="margin: 0; padding: 0 30px 0 123px;">
+        <figure style="margin: 0; padding: 0 30px 0 123px;" id="error-log-ui">
           <a href="https://storage.googleapis.com/portfolio-assets-bucket/errorlog.png" target="__blank">
             <img class="img-expand" style="display: flex; border-radius: 4px; width: 100%; max-width: 650px;height: auto; max-height: 230px; margin: 0 auto 0 auto;" alt="UI v0 screenshot" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/errorlog.png" />
           </a>
@@ -506,7 +563,7 @@
     </div>
 
     <!-- NEXT BUTTON  -->
-    <div style="display:flow-root; margin-top: 15px;">
+    <div style="display:flow-root; margin-top: 5px;">
       <a class="read-more_content-title tab-buttons" id="Next Button" onClick="return handleChange(getNextTab())" style="float: right">
         Next Tab <p id="Arrow Right" class="arrows" style="display:inline-flex">&#8594;</p>
       </a>
