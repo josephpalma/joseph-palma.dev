@@ -25,8 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-package": "react-scripts build && Xcopy build \\..\\build /E /H /C /I && rmdir /s build",
-    "deploy": "react-scripts build && Xcopy build \\..\\build\\client /E /H /C /I && rmdir /s build && Xcopy \\..\\server \\..\\build /E /H /C /I && cd .. && cd build && git add . && git commit -am 'deployment' && git push heroku master", 
+    "build-package": "react-scripts build && Xcopy build ..\\build\\client /E /H /C /I && rmdir /s build && Xcopy ..\\server ..\\build /E /H /C /I",
+    "deploy": "react-scripts build && Xcopy build ..\\build\\client /E /H /C /I && rmdir /s build && Xcopy ..\\server ..\\build /E /H /C /I && cd .. && cd build && git add . && git commit -am 'deployment' && git push heroku master", 
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src/**/*.js src/**/*.jsx"

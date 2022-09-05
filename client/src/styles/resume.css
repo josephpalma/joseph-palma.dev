@@ -4,6 +4,7 @@
 
 .resume-wrapper {
   padding-top: 14px;
+  color: var(--text-color);
 }
 
 .mobile-wrapper {

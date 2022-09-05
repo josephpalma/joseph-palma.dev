@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import '../../../styles/contact.css';
 import { Typography } from '@mui/material';
 import SimpleCrypto from 'simple-crypto-js';
-import tokens from '../../../assets/tokens.json';
 import ContactField from './ContactField';
 import badStuff from '../../../assets/badCharacters';
 import api from '../../../assets/api.json';
@@ -29,7 +28,7 @@ const postData = async (body, url) => {
 };
 
 function ContactMe({ screenWidth, isDarkTheme }) {
-  const crypt = new SimpleCrypto(tokens.crypt.key);
+  const crypt = new SimpleCrypto(process.env.REACT_APP_cryptoKey);
   const [nameError, setNameError] = useState(false);
   const [nameErrorMessage, setNameErrorMessage] = useState('');
   const [emailError, setEmailError] = useState(false);

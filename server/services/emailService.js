@@ -61,7 +61,7 @@ const sendEmail = async function (body) {
 
     const options = {
       from: process.env.emailUser,
-      to: process.env.emailPass,
+      to: process.env.emailUser,
       subject: 'Inquiry from josephpalma.dev',
       html: htmlToSend
     }

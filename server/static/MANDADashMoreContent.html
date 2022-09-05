@@ -53,6 +53,9 @@
       color: rgba(255,255,255, 0.80);
       font-family: 'San Francisco Light' !important;
     }
+    .read-more_content-p-wrapper {
+      margin-left: 3px;
+    }
     .subnav {
       overflow: hidden;
       display: inline-flex;
@@ -299,20 +302,24 @@
           <i>“My logisticians are a humorless lot... they know if my campaign fails, they are the first ones I will slay.” - Alexander the Great</i>     
         </p>
         <h4 class="read-more_content-title">Project Challenge</h4>
-        <p class="read-more_content-p">
-          When crisis arises, Marine Corps Commanders must quickly orient, observe and assess the situation. 
-          Commander’s employ logisticians to inform the course of action by providing estimates on air and sea port 
-          attributes and assets. Estimates needed to make a safe determination can take planners days per key terrain 
-          location. Time spent manually aggregating hundreds of data points takes time away from Commanders - 
-          which can result in catastrophic repercussions for our nation, friendly forces, partners and allies.     
-        </p>
+        <div class="read-more_content-p-wrapper">
+          <p class="read-more_content-p">
+            When crisis arises, Marine Corps Commanders must quickly orient, observe and assess the situation. 
+            Commander’s employ logisticians to inform the course of action by providing estimates on air and sea port 
+            attributes and assets. Estimates needed to make a safe determination can take planners days per key terrain 
+            location. Time spent manually aggregating hundreds of data points takes time away from Commanders - 
+            which can result in catastrophic repercussions for our nation, friendly forces, partners and allies.     
+          </p>
+        </div>
         <h4 class="read-more_content-title">Project Solution</h4>
-        <p class="read-more_content-p">
-          The “Maritime and Aviation Dashboard” or Manda Dashboard allows logisticians to conduct estimates much 
-          faster by providing quick data cards with port, airfield, and throughput capacities on specific locations. 
-          The Dashboard achieved the mission statement by aggregating hard-to-access information, accessible in a user 
-          friendly dashboard, improving the agility of the logistical team and enabling faster decisions for Commanders.
-        </p>
+        <div class="read-more_content-p-wrapper">
+          <p class="read-more_content-p">
+            The “Maritime and Aviation Dashboard” or Manda Dashboard allows logisticians to conduct estimates much 
+            faster by providing quick data cards with port, airfield, and throughput capacities on specific locations. 
+            The Dashboard achieved the mission statement by aggregating hard-to-access information, accessible in a user 
+            friendly dashboard, improving the agility of the logistical team and enabling faster decisions for Commanders.
+          </p>
+        </div>
       </div>
     </div>
 
@@ -352,23 +359,26 @@
         <div>
           <div>
             <h4 class="read-more_content-title" style="margin-top: 0; ">Bureaucratic Web Architecture</h4>
-            <p class="read-more_content-p">
-              Several military projects over the past century have concentrated on developing speed and scalability for classified communication, 
-              in fact, the Internet itself was the outcome of a
-            </p>
-            <a href="https://en.wikipedia.org/wiki/ARPANET" class="read-more_content-p hover-underline-animation about-link" style="text-decoration: none;" target="__blank" referrerPolicy="no-referrer" rel="external">
-              military project</a>.
-            <p class="read-more_content-p">
-              However, modern protocols often create roadblocks that can stall logistical teams.
-            </p>
-            </p>
+            <div class="read-more_content-p-wrapper">
+              <p class="read-more_content-p">
+                Several military projects over the past century have concentrated on developing speed and scalability for classified communication, 
+                in fact, the Internet itself was the outcome of a
+              </p>
+              <a href="https://en.wikipedia.org/wiki/ARPANET" class="read-more_content-p hover-underline-animation about-link" style="text-decoration: none;" target="__blank" referrerPolicy="no-referrer" rel="external">
+                military project</a>.
+              <p class="read-more_content-p">
+                However, modern protocols often create roadblocks that can stall logistical teams.
+              </p>
+            </div>
           </div>
           <h4 class="read-more_content-title">Client Pain Points</h4>
-          <p class="read-more_content-p">
-            Existing logistical tools run on a secure private network, known as the Secure Internet Protocol Router Network (SIPRNet). 
-            Reliance on Controlled Unclassified Information (CUI) segregates publicly available knowledge from many SIPRNet applications. 
-            Complicated network permissions make it difficult for non-logisticians in the planning process to access the essential data they provide.
-          </p>
+          <div class="read-more_content-p-wrapper">
+            <p class="read-more_content-p">
+              Existing logistical tools run on a secure private network, known as the Secure Internet Protocol Router Network (SIPRNet). 
+              Reliance on Controlled Unclassified Information (CUI) segregates publicly available knowledge from many SIPRNet applications. 
+              Complicated network permissions make it difficult for non-logisticians in the planning process to access the essential data they provide.
+            </p>
+          </div>
         </div>
         <div>
           <h4 class="read-more_content-title">Key Findings</h4>
@@ -390,11 +400,13 @@
         <div>
           <div>
             <h4 class="read-more_content-title">Understand, Ideate and Iterate</h4>
-            <p class="read-more_content-p">
-              Our sponsors elected for Tableau and Python, because of the ubiquity of Python in SIPRNet applications. However, when they learned about the license costs Tableau was scratched. 
-              Instead, we worked with them to create a tech stack that would suit their needs and help us achieve the mission. 
-              There was only one constraint: <i>zero cash overhead.</i> 
-            </p>
+            <div class="read-more_content-p-wrapper">           
+              <p class="read-more_content-p">
+                Our sponsors elected for Tableau and Python, because of the ubiquity of Python in SIPRNet applications. However, when they learned about the license costs Tableau was scratched. 
+                Instead, we worked with them to create a tech stack that would suit their needs and help us achieve the mission. 
+                There was only one constraint: <i>zero cash overhead.</i> 
+              </p>
+            </div>
           </div>
           <div style="display: inline-flex; padding-top: 8px; padding-right: 10px;" class="subtitle-div">
             <h5 class="read-more_content-title read-more_content-subtitle ideate-subtitle" style="min-width: 69px;">Design v1</h5>
@@ -433,38 +445,46 @@
         <div>
           <div>
             <h4 class="read-more_content-title" style=" margin:0;">Niche Data Requirements</h4>
-            <p class="read-more_content-p">
-              To start, our sponsors compiled a list of ~100 sources, however most were locked up behind the SIPRNet permissions wall. 
-              So we set out to find our own alternate, reliable sources - a task we ended up investing about ⅓ of our time into, 
-              because as it turns out, searching “mooring points at Port Aitape, Papua New Guinea” doesn’t turn up any useful information. 
-            </p>
+            <div class="read-more_content-p-wrapper">
+              <p class="read-more_content-p">
+                To start, our sponsors compiled a list of ~100 sources, however most were locked up behind the SIPRNet permissions wall. 
+                So we set out to find our own alternate, reliable sources - a task we ended up investing about ⅓ of our time into, 
+                because as it turns out, searching “mooring points at Port Aitape, Papua New Guinea” doesn’t turn up any useful information. 
+              </p>
+            </div>
           </div>
           <div style="padding-top: 12px">
-            <p class="read-more_content-p">
-              Most value ended up coming from Searates, World Port Index, Pub150 Index, and Maxar. Altogether we succeeded in sourcing <i>94%</i> of the
-              <a href="https://josephpalma.dev/portAirfieldDataPoints" target="__blank" referrerPolicy="no-referrer" rel="external" class="read-more_content-p hover-underline-animation about-link" style="color: inherit; text-decoration: none;">
-                original data points
-              </a>
-              <p class="read-more_content-p">from alternative sources - much higher than we expected. </p>
-            </p>
+            <div class="read-more_content-p-wrapper">
+              <p class="read-more_content-p">
+                Most value ended up coming from Searates, World Port Index, Pub150 Index, and Maxar. Altogether we succeeded in sourcing <i>94%</i> of the
+                <a href="https://josephpalma.dev/portAirfieldDataPoints" target="__blank" referrerPolicy="no-referrer" rel="external" class="read-more_content-p hover-underline-animation about-link" style="color: inherit; text-decoration: none;">
+                  original data points
+                </a>
+                <p class="read-more_content-p">from alternative sources - much higher than we expected. </p>
+              </p>
+            </div>
           </div>
         </div>
         <div>
           <h4 class="read-more_content-title">Open Source Solution</h4>
-          <p class="read-more_content-p">
-            Logisticians need to be able to conduct estimates much faster. By sourcing only publicly available information, we removed the need for authorization, reducing wait time considerably. 
-          </p>
+          <div class="read-more_content-p-wrapper">
+            <p class="read-more_content-p">
+              Logisticians need to be able to conduct estimates much faster. By sourcing only publicly available information, we removed the need for authorization, reducing wait time considerably. 
+            </p>
+          </div>
         </div>
         <div>
           <h4 class="read-more_content-title">Data Flow</h4>
           <div id="data-flow" style="display: inline-flex">
             <div id="data-flow-p" style="width: 50%;">
-              <p class="read-more_content-p" style="display: block">
-                With the goal of data autonomy and flexibility we designed a backend system that provides information in universal formats. 
-              </p>
-              <p class="read-more_content-p" style="display: block; padding-top: 5px">
-                Data is scraped into .csv’s where it is distributed to SIPRNet, and our MongoDB instance for use on the front-end. Everytime the scraper runs, backups are written to a separate DB, and each dataset is loaded with the latest information.
-              </p>
+              <div class="read-more_content-p-wrapper">
+                <p class="read-more_content-p" style="display: block">
+                  With the goal of data autonomy and flexibility we designed a backend system that provides information in universal formats. 
+                </p>
+                <p class="read-more_content-p" style="display: block; padding-top: 5px">
+                  Data is scraped into .csv’s where it is distributed to SIPRNet, and our MongoDB instance for use on the front-end. Everytime the scraper runs, backups are written to a separate DB, and each dataset is loaded with the latest information.
+                </p>
+              </div>
             </div>
             <figure style="margin: 0; padding-left: 8px">
               <a href="https://storage.googleapis.com/portfolio-assets-bucket/dataflowchart.png" target="__blank">
