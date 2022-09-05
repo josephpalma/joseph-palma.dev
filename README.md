@@ -160,12 +160,20 @@ Once installed, verify by checking the installed version:
 
 ## 🛠 Build For Production
 
-Generate a full static production build in /client
+#### Simple build
+Runs the standard React build script and generate a full static production build in /client.
 
 ```
 npm run build
 ```
-The production build is now ready to be deployed from the /server directory as root.
+
+#### Build Package
+Assembles a build package in the root directory's /build folder. The app is now ready to be deployed from the /build directory.
+
+```
+npm run build-package
+```
+
 
 <br />
 
@@ -173,7 +181,9 @@ The production build is now ready to be deployed from the /server directory as r
 
 Before you deploy, make sure to provide all the enviroment variables from the <a href="#configure-project">Configure Project</a> section to your hosting service.
 
-You can replace the contents of scripts.deploy in client/package.json with your own deployment script. Then you can deploy directly from /client to Heroku with
+To deploy to Heroku, make sure you've set up a Heroku application, and downloaded the <a href="https://devcenter.heroku.com/articles/heroku-cli">CLI</a>. Read more information on deploying to Heroku with Git, <a href="https://devcenter.heroku.com/categories/deployment">here</a>
+
+You can deploy to Heroku with this command, or replace the contents of scripts.deploy in client/package.json with your own deployment script. To deploy with Heroku, from the /client directory, run:
 
 ```
 npm run deploy
