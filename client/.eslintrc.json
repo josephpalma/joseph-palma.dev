@@ -36,6 +36,7 @@
         "consistent-return": ["off"],
         "arrow-body-style": ["off"],
         "jsx-quotes": ["off"],
+        "no-console": ["off"],
         "no-shadow": ["off"],
         "prefer-const": ["off"],
         "max-len": ["off"]
