@@ -158,7 +158,7 @@ Once installed, verify by checking the installed version:
 
 <br />
 
-## 🚀 Build and Run For Production
+## 🛠 Build For Production
 
 Generate a full static production build in /client
 
@@ -167,7 +167,18 @@ npm run build
 ```
 The production build is now ready to be deployed from the /server directory as root.
 
+<br />
+
+## 🚀 Deploy
+
 Before you deploy, make sure to provide all the enviroment variables from the <a href="#configure-project">Configure Project</a> section to your hosting service.
+
+You can replace the contents of scripts.deploy in client/package.json with your own deployment script. Then you can deploy directly from /client to Heroku with
+
+```
+npm run deploy
+```
+
 
 <br />
 <br />
