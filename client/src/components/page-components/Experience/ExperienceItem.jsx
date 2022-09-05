@@ -88,7 +88,11 @@ function ExperienceItem({
     return spacer;
   };
 
-  const handleMore = () => { setReadMore(!readMore); };
+  const handleMore = () => {
+    setReadMore(!readMore);
+    document.getElementById('dropdown-divider-right').style.display = 'none';
+    document.getElementById('dropdown-divider-left').style.display = 'none';
+  };
 
   const mobile = screenWidth < 898;
   setStyles();

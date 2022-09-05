@@ -382,7 +382,10 @@
 
 @media (max-width: 340px) { 
   #dropdown-divider-left, #dropdown-divider-right {
-    display: none;
+    display: none !important;
+  }
+  .read-more_button {
+    margin-top: -3px;
   }
 }
 

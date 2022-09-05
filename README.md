@@ -96,12 +96,7 @@ Note that this project was not intented as a starter theme.
 
 ### Prerequisites
 
-Install Node.js with the [installer](https://nodejs.org/en/download/), or from a linux command line:
-
-Linux only
-  ```sh
-  sudo apt install nodejs
-  ```
+Install Node.js with the [installer](https://nodejs.org/en/download/)
 
 Once installed, verify by checking the installed version:
   ```sh
@@ -161,19 +156,20 @@ Once installed, verify by checking the installed version:
 ## 🛠 Build For Production
 
 #### Simple build
-Runs the standard React build script and generate a full static production build in /client.
+Runs the standard React build script and generates a full static production build in /client.
 
 ```
 npm run build
 ```
 
 #### Build Package
+
 Assembles a build package in the root directory's /build folder. The app is now ready to be deployed from the /build directory.
 
 ```
 npm run build-package
 ```
-
+<i>Note: This command only runs on Windows. Consider <a href="#configure-project">contributing</a> build commands for your OS of choice.</i>
 
 <br />
 
@@ -181,14 +177,14 @@ npm run build-package
 
 Before you deploy, make sure to provide all the enviroment variables from the <a href="#configure-project">Configure Project</a> section to your hosting service.
 
-To deploy to Heroku, make sure you've set up a Heroku application, and downloaded the <a href="https://devcenter.heroku.com/articles/heroku-cli">CLI</a>. Read more information on deploying to Heroku with Git, <a href="https://devcenter.heroku.com/categories/deployment">here</a>
+To deploy to Heroku, make sure you've set up a Heroku application, and downloaded the <a href="https://devcenter.heroku.com/articles/heroku-cli">CLI</a>. Read more information on deploying to Heroku with Git, <a href="https://devcenter.heroku.com/categories/deployment">here</a>.
 
 You can deploy to Heroku with this command, or replace the contents of scripts.deploy in client/package.json with your own deployment script. To deploy with Heroku, from the /client directory, run:
 
 ```
 npm run deploy
 ```
-
+<i>Note: This command only runs on Windows. Consider <a href="#configure-project">contributing</a> deploy commands for your OS of choice.</i>
 
 <br />
 <br />

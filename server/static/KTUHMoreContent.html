@@ -52,7 +52,7 @@
       border-left: 2px solid floralwhite;
   }
   .landing__play-btn-outer {
-      transform: scale(0.40);
+      transform: scale(0.35);
       flex: none;
       width: 10em;
       height: 10em;
@@ -65,6 +65,8 @@
     margin-left: -30px;
     font-family: 'nimbus-sans-extended','alda',sans-serif;
     overflow-y: hidden;
+    white-space: nowrap;
+    font-size: .85rem;
   }
   .landing__info > p {
     margin: 0;
@@ -97,9 +99,17 @@
     border: solid 2px #fff;
     float: left;
   }
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 455px) {
       .read-more_grid {
         display: inherit;
+      }
+    }
+  @media screen and (max-width: 320px) {
+      .landing__info {
+        display: none;
+      }
+      .landing__play-btn-outer {
+        display: none;
       }
     }
   </style>

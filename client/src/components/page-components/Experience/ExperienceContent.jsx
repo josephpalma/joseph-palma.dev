@@ -88,6 +88,11 @@ function ExperienceContent({
     </>
   );
 
+  if (mobile && moreContentHTML !== null) {
+    document.getElementById('dropdown-divider-right').style.display = 'revert';
+    document.getElementById('dropdown-divider-left').style.display = 'revert';
+  }
+
   const setMoreContentSize = () => {
     if (moreContentSize === 'large') {
       return {
