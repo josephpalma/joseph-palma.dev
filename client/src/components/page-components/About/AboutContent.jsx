@@ -21,11 +21,11 @@ function AboutContent({ content, setTab }) {
             </Typography>
             <br />
             <Typography as="p" variant="body1">
-              {experience.map((item) => item)}
+              {skills.map((item) => item)}
             </Typography>
             <br />
             <Typography as="p" variant="body1">
-              {skills.map((item) => item)}
+              {experience.map((item) => item)}
             </Typography>
             <br />
             <Typography as="p" variant="body1">
