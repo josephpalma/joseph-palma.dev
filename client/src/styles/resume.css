@@ -67,6 +67,10 @@
   display: none;
 }
 
+.pagination > nav > ul > li > button {
+  color: var(--text-color);
+}
+
 @media (max-width: 1300px) {
   .pagination {
     width: 75.5%;

@@ -132,7 +132,7 @@ Once installed, verify by checking the installed version:
 
 ### Configure
 
-1. Use your own data by replacing all endpoints in /client/src/assets/api.json with your own data sources. 
+1. Use your own data by replacing all endpoints in /client/src/assets/api/ with your own data sources. 
 
 2. Generate a secure 160-bit WPA or higher API Key using [https://randomkeygen.com/](https://randomkeygen.com/)
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import '../../../styles/skills.css';
+import theme from '../../../assets/theme';
 
 function SkillsCard({ mobile, index, logo, fontSize, isDarkTheme, name }) {
   const darkBackground = 'rgb(0,0,0)';
@@ -52,7 +53,7 @@ function SkillsCard({ mobile, index, logo, fontSize, isDarkTheme, name }) {
           variant="h1"
           component="div"
           className="card-header"
-          color={isDarkTheme ? 'text.light' : 'text.dark'}
+          color={isDarkTheme ? theme.palette.text.darkMode.light : theme.palette.text.lightMode.light}
         >
           {name}
         </Typography>

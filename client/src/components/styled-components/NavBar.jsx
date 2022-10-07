@@ -19,7 +19,7 @@ function NavBar({ isDarkTheme, changeTheme }) {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Spacer axis="horizontal" size={10} /> <JPLogoIcon /> <Spacer axis="horizontal" size={18} />
-            <Switch color={color} checked={isDarkTheme} onChange={changeTheme} className="light-switch" />
+            <Switch color={color} checked={isDarkTheme} onChange={changeTheme} className="light-switch" aria-label="dark mode switch" tabIndex={0} />
             <Box component="div" sx={{ flexGrow: 1 }}>
               <div style={{ width: '25px', marginTop: '5px' }}>
                 {isDarkTheme === false ? <LightMode /> : <DarkMode className="light-switch-color" color={color} />}
@@ -27,13 +27,13 @@ function NavBar({ isDarkTheme, changeTheme }) {
             </Box>
             <Box className="menu-icon-box">
               <a title="LinkedIn" href={links.linkedin.url} target="__blank" referrerPolicy="no-referrer" rel="external">
-                <LinkedIn className="menu-icons linkedin" alt="LinkedIn Link" />
+                <LinkedIn className="menu-icons linkedin" alt="LinkedIn Link" aria-label="linkedin link" />
               </a>
               <a title="Github" href={links.github.url} target="__blank" referrerPolicy="no-referrer" rel="external">
-                <GitHub className="menu-icons" alt="Github Link" />
+                <GitHub className="menu-icons" alt="Github Link" aria-label="github link" />
               </a>
               <a title="Stack Overflow" href={links.stackoverflow.url} className="menu-icons icon-img" target="__blank" referrerPolicy="no-referrer" rel="external">
-                <StackOverflowIcon style={filter} alt="Stack Overflow Link" />
+                <StackOverflowIcon style={filter} alt="Stack Overflow Link" aria-label="stack overflow link" />
               </a>
             </Box>
           </Toolbar>

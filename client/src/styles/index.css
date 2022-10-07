@@ -41,9 +41,9 @@
 
 :root {
   /* Backgrounds */
-  --background: #121212;
+  --background: hsl(243deg 3% 10%);
   --background-gradient: rgba(18,18,18,.94);
-  --light-background: #fff;
+  --light-background: hsl(0deg 0% 0%);
 
   /* Titles */
   --title-color:  rgba(0,0,0, 0.98);

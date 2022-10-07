@@ -2,12 +2,15 @@ import React from 'react';
 import '../../../styles/timeline.css';
 import { Container, CircularProgress } from '@mui/material';
 import { Timeline } from '@mui/lab';
-import api from '../../../assets/api.json';
+import devApi from '../../../assets/api/develop.api.json';
+import prodApi from '../../../assets/api/production.api.json';
 import useFetch from '../../hooks/useFetch';
 import JobTimelineItem from './JobTimelineItem';
 
 function Jobs({ mobile, isDarkTheme }) {
+  let api = process.env.NODE_ENV !== 'production' ? devApi : prodApi;
   const { status, data, error } = useFetch(api.jobs.url);
+
   document.body.style.setProperty('--timeline-item-width', mobile ? '165%' : 'inherit');
   document.body.style.setProperty('--timeline-content-shift', mobile ? 'translate(-1px,-1%)' : 'none');
   document.body.style.setProperty('--timeline-items-shift', mobile ? 'translate(-22px,-1%)' : 'none');

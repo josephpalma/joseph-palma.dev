@@ -25,11 +25,11 @@ function App() {
   const [isDarkTheme, setIsDarkTheme] = useStickyState(true, 'themePreference');
 
   const [tab, setTab] = useStickyState('About', 'tabPreference');
-  document.body.style.setProperty('--background', isDarkTheme ? 'rgba(0,0,0,0.0)' : theme.palette.background.light);
+  document.body.style.setProperty('--background', isDarkTheme ? theme.palette.background.dark : theme.palette.background.light);
   document.body.style.setProperty('--background-gradient', isDarkTheme ? 'rgba(18,18,18,.94)' : '#f7f7f7');
-  document.body.style.setProperty('--light-background', isDarkTheme ? theme.palette.background.dark : '#fff');
-  document.body.style.setProperty('--title-color', isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.85)');
-  document.body.style.setProperty('--text-color', isDarkTheme ? 'rgba(255,255,255, 0.8)' : 'rgba(0,0,0, 0.99)');
+  document.body.style.setProperty('--light-background', isDarkTheme ? theme.palette.background.extraDark : '#fff');
+  document.body.style.setProperty('--title-color', isDarkTheme ? theme.palette.text.darkMode.light : theme.palette.text.lightMode.light);
+  document.body.style.setProperty('--text-color', isDarkTheme ? theme.palette.text.darkMode.dark : theme.palette.text.lightMode.dark);
   document.body.style.setProperty('--primary-color', theme.palette.primary.main);
   const screenWidth = useScreenWidth();
   const mobile = screenWidth < 650;

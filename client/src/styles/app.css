@@ -16,6 +16,8 @@ body {
 
 p {
   font-family: var(--text-fam), var(--text_font-family) !important;
+  font-size: 1.035rem !important;
+  transition: .01ms !important;
 }
 
 p::selection, 
@@ -45,8 +47,9 @@ html {
 }
 
 .main-card {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important;
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.05)) !important; */
   background-color: var(--background) !important;
+  /* background: hsl(0 0% 8.5%); */
 }
 
 #root-component {
@@ -141,6 +144,11 @@ html {
 .navtabs {
   font-family: 'San Francisco' !important;
   color: var(--navtabs-color) !important;
+  font-size: .97rem !important;
+}
+
+.navtabs:focus {
+  font-size: medium;
 }
 
 .hover-underline-animation {

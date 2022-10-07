@@ -3,6 +3,7 @@ import { Toolbar, Container, AppBar, Box, Typography } from '@mui/material';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import links from '../../assets/links.json';
 import StackOverflowIcon from './Icons/StackOverflowIcon';
+import theme from '../../assets/theme';
 
 function Footer({ isDarkTheme }) {
   const style = isDarkTheme
@@ -19,8 +20,8 @@ function Footer({ isDarkTheme }) {
     <AppBar position="relative" color="primary" id="footer" component="footer" enableColorOnDark>
       <Container maxWidth="xl">
         <Toolbar disableGutters className="footer-toolbar">
-          <Typography color={isDarkTheme ? 'text.dark' : 'text.light'} variant="body1" className="footer-text">
-            &copy;{year} Joseph Palma | Thanks for visiting
+          <Typography color={isDarkTheme ? theme.palette.text.lightMode.light : theme.palette.text.darkMode.light} variant="body1" className="footer-text">
+            &copy;{year} All Rights Reserved | Thanks for visiting
           </Typography>
           <Box className="footer-links">
             <a

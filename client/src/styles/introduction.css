@@ -12,9 +12,10 @@
 
 .intro-header_text {
   display: inline;
-  font-size: 1.065rem !important;
+  font-size: 1.085rem !important;
   color: var(--text-color);
   white-space: nowrap;
+  font-family:  "San Francisco Medium", var(--text_font-family) !important;
 }
 
 .header {
@@ -24,11 +25,11 @@
 }
 
 .header-text {
-  font-family:  "San Francisco Medium", "Roboto", sans-serif !important;
+  font-family:  "San Francisco Medium", var(--header_font-family) !important;
 }
 
 .about-link {
-  font-family: "San Francisco Medium", "Roboto","Helvetica","Arial",sans-serif;
+  font-family: "San Francisco Medium", var(--text_font-family) !important;
 }
 
 .intro-grid {
