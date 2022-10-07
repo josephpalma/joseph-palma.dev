@@ -50,9 +50,12 @@ function DesktopResume({ width }) {
                   </a>
                 </Button>
               </div>
-              {numPages > 1 ? <Stack spacing={2} className="top-content_item pagination">
-                <Pagination count={numPages} color="primary" page={pageNumber} onChange={handleChange} />
-              </Stack> : <></>}
+              {numPages > 1 ?
+                <Stack spacing={2} className="top-content_item pagination">
+                  <Pagination count={numPages} color="primary" page={pageNumber} onChange={handleChange} />
+                </Stack> :
+                <></>
+              }
             </div>
           ) : <></>}
         <div className="resume-wrapper">
