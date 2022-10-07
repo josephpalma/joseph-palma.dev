@@ -1,0 +1,25 @@
+{
+    "skills": {
+      "url": "http://localhost:8080/skills"
+    },
+    "jobs": {
+      "url": "http://localhost:8080/jobs"
+    },
+    "resume": {
+      "url": "https://storage.googleapis.com/portfolio-assets-bucket/Joseph%20Palma%20Resume.pdf"
+    },
+    "experience": {
+      "url": "http://localhost:8080/experiences"
+    },
+    "email": {
+      "url": "http://localhost:8080/outboundEmailRequests"
+    },
+    "about": {
+      "url": "http://localhost:8080/about"
+    },
+    "dev": {
+      "moreContent": {
+        "url": "http://localhost:8080/moreContentTesting"
+      }
+    }
+  }

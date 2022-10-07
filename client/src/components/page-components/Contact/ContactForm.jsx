@@ -4,7 +4,8 @@ import { Typography } from '@mui/material';
 import SimpleCrypto from 'simple-crypto-js';
 import ContactField from './ContactField';
 import badStuff from '../../../assets/badCharacters';
-import api from '../../../assets/api.json';
+import prodApi from '../../../assets/api/production.api.json';
+import devApi from '../../../assets/api/develop.api.json';
 import ContactButton from './ContactButton';
 import Spacer from '../../styled-components/Spacer';
 import theme from '../../../assets/theme';
@@ -28,7 +29,9 @@ const postData = async (body, url) => {
 };
 
 function ContactMe({ screenWidth, isDarkTheme }) {
+  let api = process.env.NODE_ENV !== 'production' ? devApi : prodApi;
   const crypt = new SimpleCrypto(process.env.REACT_APP_cryptoKey);
+
   const [nameError, setNameError] = useState(false);
   const [nameErrorMessage, setNameErrorMessage] = useState('');
   const [emailError, setEmailError] = useState(false);
@@ -44,7 +47,7 @@ function ContactMe({ screenWidth, isDarkTheme }) {
   const [message, setMessage] = useState('');
   const [result, setResult] = useState('none');
 
-  document.body.style.setProperty('--typed-text-color', isDarkTheme ? theme.palette.text.light : theme.palette.background.dark);
+  document.body.style.setProperty('--typed-text-color', isDarkTheme ? theme.palette.text.darkMode.light : theme.palette.text.lightMode.dark);
   document.body.style.setProperty('--field-border-color', isDarkTheme ? 'rgba(255,255,255, 0.3)' : 'rgba(0,0,0, 0.5)');
   document.body.style.setProperty('--field-border-hover-color', isDarkTheme ? 'rgba(255,255,255, 0.7)' : 'rgba(0,0,0, 0.7)');
 

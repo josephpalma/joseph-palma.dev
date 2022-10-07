@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, CircularProgress } from '@mui/material';
 import Spacer from '../../styled-components/Spacer';
 import ExperienceInnerHtml from './ExperienceInnerHtml';
-import api from '../../../assets/api.json';
+import devApi from '../../../assets/api/develop.api.json';
 
 const ALLOWED_ATTR = [
   'style',
@@ -63,7 +63,7 @@ function ExperienceContent({
 
   useEffect(async () => {
     let data = '';
-    let url = dev ? api.dev.moreContent.url : content;
+    let url = dev ? devApi.dev.moreContent.url : content;
     if ((readMore && content !== undefined) || dev) {
       try {
         const response = await fetch(url);

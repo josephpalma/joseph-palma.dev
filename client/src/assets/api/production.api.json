@@ -6,7 +6,7 @@
     "url": "https://jp-portfolio-site.herokuapp.com/jobs"
   },
   "resume": {
-    "url": "https://storage.googleapis.com/portfoliosite-photos/JosephPalma.pdf"
+    "url": "https://storage.googleapis.com/portfolio-assets-bucket/Joseph%20Palma%20Resume.pdf"
   },
   "experience": {
     "url": "https://jp-portfolio-site.herokuapp.com/experiences"
@@ -16,10 +16,5 @@
   },
   "about": {
     "url": "https://jp-portfolio-site.herokuapp.com/about"
-  },
-  "dev": {
-    "moreContent": {
-      "url": "http://localhost:8080/moreContentTesting"
-    }
   }
 }

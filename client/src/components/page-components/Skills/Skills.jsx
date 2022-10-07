@@ -1,12 +1,14 @@
 import { Container, CircularProgress } from '@mui/material';
 import React from 'react';
 import useFetch from '../../hooks/useFetch';
-import api from '../../../assets/api.json';
+import devApi from '../../../assets/api/develop.api.json';
+import prodApi from '../../../assets/api/production.api.json';
 import '../../../styles/skills.css';
 import SkillsRow from './SkillsRow';
 import Spacer from '../../styled-components/Spacer';
 
 function Skills({ mobile, screenWidth, isDarkTheme }) {
+  let api = process.env.NODE_ENV !== 'production' ? devApi : prodApi;
   const { status, data, error } = useFetch(api.skills.url);
 
   const makeLists = (inData) => {

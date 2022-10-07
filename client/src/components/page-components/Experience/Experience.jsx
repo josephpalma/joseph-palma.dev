@@ -1,13 +1,16 @@
 import React from 'react';
 import { CircularProgress } from '@mui/material';
-import api from '../../../assets/api.json';
+import devApi from '../../../assets/api/develop.api.json';
+import prodApi from '../../../assets/api/production.api.json';
 import useFetch from '../../hooks/useFetch';
 import '../../../styles/experience.css';
 import ExperienceItem from './ExperienceItem';
 import Spacer from '../../styled-components/Spacer';
 
 function Experience({ isDarkTheme, screenWidth }) {
+  let api = process.env.NODE_ENV !== 'production' ? devApi : prodApi;
   const { status, data, error } = useFetch(api.experience.url);
+
   document.body.style.setProperty('--img-wrapper-shadow', isDarkTheme ? 'drop-shadow(0px -5px 10px rgba(0,0,0,0.7))' : 'drop-shadow(-5px -2px 10px var(--primary-color_strong))');
   document.body.style.setProperty('--img-wrapper-background', isDarkTheme ? 'var(--primary-color_soft)' : 'var(--secondary-color_soft)');
   document.body.style.setProperty('--img-filter', isDarkTheme ? 'grayscale(36%) saturate(121%) brightness(98%)' : 'grayscale(30%) saturate(119%) contrast(104%)');
