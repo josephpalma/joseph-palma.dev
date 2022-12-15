@@ -6,7 +6,6 @@ import Spacer from '../styled-components/Spacer';
 import theme from '../../assets/theme';
 
 function Introduction({ isDarkTheme, tablet }) {
-  const color = isDarkTheme ? 'primary' : 'secondary';
   return (
     <div className="intro-grid animate__animated animate__bounceInDown">
       <div>
@@ -33,7 +32,7 @@ function Introduction({ isDarkTheme, tablet }) {
         <Typography color={isDarkTheme ? theme.palette.text.darkMode.dark : theme.palette.text.lightMode.light} variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
           I am a&nbsp;
         </Typography>
-        <Typography variant="body1" color={color} style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
+        <Typography variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">
           {introduction.title.occupation}&nbsp;
         </Typography>
         <Typography color={isDarkTheme ? theme.palette.text.darkMode.dark : theme.palette.text.lightMode.light} variant="body1" style={{ fontSize: isDarkTheme ? '16px' : '16.5px' }} className="intro-header_text">

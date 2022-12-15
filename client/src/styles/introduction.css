@@ -13,7 +13,7 @@
 .intro-header_text {
   display: inline;
   font-size: 1.085rem !important;
-  color: var(--text-color);
+  color: var(--primary-color_text);
   white-space: nowrap;
   font-family:  "San Francisco Medium", var(--text_font-family) !important;
 }

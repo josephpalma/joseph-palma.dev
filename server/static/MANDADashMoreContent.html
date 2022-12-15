@@ -19,10 +19,10 @@
       letter-spacing: normal !important;
       text-transform: capitalize !important;
       font-family: 'JetBrains Mono Medium' !important;
-      font-size: 12px !important;
+      font-size: .9rem !important;
       width: 100px;
       min-width: 100px;
-      display: inline-flex;
+      display: inline;
       padding-bottom: 5px;
       transform: translateY(-1px);
     }
@@ -36,7 +36,7 @@
     .read-more_content-title {
       font-family: var(--title-secondary_font-family);
       font-weight: var(--title_font-weight);
-      font-size: 1rem;
+      font-size: 1.11rem;
       line-height: var(--title_line-height);
       letter-spacing: var(--title_letter-spacing);
       color: var(--primary-color);
@@ -52,9 +52,6 @@
       letter-spacing: 0.0388em;
       color: rgba(255,255,255, 0.80);
       font-family: 'San Francisco Light' !important;
-    }
-    .read-more_content-p-wrapper {
-      margin-left: 3px;
     }
     .subnav {
       overflow: hidden;
@@ -88,7 +85,7 @@
       text-decoration: none;
     }
     .subnav > a:active, .subnav > a:hover {
-      background-color: var(--primary-color_strong) !important;
+      background-color: var(--primary-color_soft) !important;
     }
     .image-box {
       display: grid;
@@ -120,15 +117,15 @@
     .subnav-inner {
       background-color: var(--primary-color_strong); 
       border-radius: 0 5px 5px 5px; 
-      padding: 8px;
+      padding: 10px;
     }
     .img-expand:hover {
       transform: scale(0.969);
     }
     .tab-buttons {
-      font-size: 13px;
+      font-size: .9rem;
       cursor: pointer;
-      padding: 0 5px;
+      padding: 0 5px 36px 0;
       height: 30px;
     }
     .tab-buttons:hover {
@@ -425,13 +422,13 @@
           <div style="display: flex; justify-content: center; padding-top: 12px;" class="ui-inspo">
             <figure style="margin: 0; padding-right: 20px" class="ui-inspo-1">
                 <a href="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20portui0.png" target="__blank" style="text-decoration:none">
-                  <img style="width: 100%; max-width: 400px; height: auto; vertical-align: top; border-radius: 4px;" class="img-expand" alt="DoD Powerpoint Port Data Card example" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20portui0.png" />
+                  <img style="width: 100%; max-width: 400px; height: auto; vertical-align: top; border-radius: 4px;" class="img-expand" alt="DoD stat sheet for ports example" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20portui0.png" />
                   <figcaption class="image-caption read-more_content-p" style="display: block;">A common way logisticians organize data is in a ‘stat sheet’ format</figcaption>
                 </a>
               </figure>
               <div style="padding-bottom: 9px;">
                 <a href="https://storage.googleapis.com/portfolio-assets-bucket/mandadash-airfieldui0.png" target="__blank">
-                  <img style="width: 100%; max-width: 342px; max-height: 280px; border-radius: 4px;" class="img-expand" alt="DoD Powerpoint Airfield DataCard example" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash-airfieldui0.png" />
+                  <img style="width: 100%; max-width: 342px; max-height: 280px; border-radius: 4px;" class="img-expand" alt="DoD stat sheet for airfields example" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash-airfieldui0.png" />
                 </a>
               </div>
           </div>
@@ -508,7 +505,7 @@
           </p>
         </div>
         <div style="padding-bottom: 15px;" class="subtitle-div">
-          <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle">Build Scraping Infrastructure</h5>
+          <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle">Build Scraping Infra- structure</h5>
           <p class="read-more_content-p" style="padding-left: 18px;">
             Some of our sources had protections against web crawlers, we were able to avoid them by implementing scraper timeouts. While this did extend the time to scrape - it also allowed for a much more thorough dataset. 
           </p>
@@ -517,7 +514,7 @@
           <div>
             <div style="display: flex">
               <h5 class="read-more_content-title read-more_content-subtitle plan-subtitle" style="margin-top:9px">Efficient Presentation of Data</h5>
-              <div style="padding-left: 16px; padding-right: 5px">
+              <div style="padding: 10px 16px 5px 16px;">
                 <p class="read-more_content-p" style="padding: 0 15px 0 0;">
                   We were able to pull non-CUI publicly available information on certain vehicles, like C-130 and C-17 aircrafts, as well as first-hand descriptions. 
                   Locations without first-hand descriptions used satellite images with embedded port and airfield asset descriptions.
@@ -539,7 +536,7 @@
               </div>
               <figure id="satellite-img" style="margin: 0;">
                 <a href="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20satelitecard.png" target="__blank">
-                  <img class="img-expand" style="width:175px; height:220px; margin-top:6px; border-radius:4px; margin-bottom: -6px;" alt="UI satelite view card" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20satelitecard.png" />
+                  <img class="img-expand" style="width:175px; height:220px; margin-top: 13px; border-radius:4px; margin-bottom: -6px;" alt="UI satelite view card" loading="lazy" src="https://storage.googleapis.com/portfolio-assets-bucket/mandadash%20satelitecard.png" />
                 </a>
                 <figcaption class="image-caption read-more_content-p">Satellite card</figcaption>
               </figure> 

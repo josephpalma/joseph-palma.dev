@@ -65,7 +65,7 @@
 
 ## 🚨Forking This Repository
 
-Yes, you may fork this repository. <strong><u>Please give proper credit</u></strong> by linking back to [josephpalma.dev](https://josephpalma.dev). Thank you!
+Yes, you may fork this repository. <strong><u>Please star this repo and give proper credit</u></strong> by linking back to [josephpalma.dev](https://josephpalma.dev). Thank you!
 
 Note that this project was not intented as a starter theme.
 
