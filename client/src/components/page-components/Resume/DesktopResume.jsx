@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Stack, Pagination, CircularProgress, Button } from '@mui/material';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import DownloadIcon from '@mui/icons-material/Download';
+import useAnalyticsEventTracker from '../../hooks/useAnalyticsEventTracker';
 import Spacer from '../../styled-components/Spacer';
 import resume from './Joseph Palma Resume.pdf';
 import '../../../styles/resume.css';
 
 function DesktopResume({ width }) {
+  const gaEventTracker = useAnalyticsEventTracker('Resume');
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [loaded, setLoaded] = useState(false);
@@ -45,7 +47,7 @@ function DesktopResume({ width }) {
                   <a href={resume} download>
                     <div className="download">
                       Download
-                      <DownloadIcon className="download-icon" />
+                      <DownloadIcon className="download-icon" onClick={() => gaEventTracker('download')} />
                     </div>
                   </a>
                 </Button>

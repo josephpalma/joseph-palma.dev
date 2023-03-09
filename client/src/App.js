@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Container, CssBaseline, Card, CardContent, Divider } from '@mui/material';
 import NavBar from './components/styled-components/NavBar';
@@ -22,8 +23,9 @@ import Footer from './components/styled-components/Footer';
 import useWaitForElm from './components/hooks/useWaitForElm';
 
 function App() {
+  const TRACKING_ID = 'G-6BHL72G034';
+  ReactGA.initialize(TRACKING_ID);
   const [isDarkTheme, setIsDarkTheme] = useStickyState(true, 'themePreference');
-
   const [tab, setTab] = useStickyState('About', 'tabPreference');
   document.body.style.setProperty('--background', isDarkTheme ? theme.palette.background.dark : theme.palette.background.light);
   document.body.style.setProperty('--background-gradient', isDarkTheme ? 'rgba(18,18,18,.94)' : '#f7f7f7');
